@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第10回フラット集会</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background-color: #f5f5f5;
+            color: #333333;
+            font-family: "Meiryo", "Arial", sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-outer {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 140vh;
+            background-image: url('images/hero-bg.webp');
+            background-position: center top;
+            background-size: cover;
+            will-change: transform;
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .hero-title {
+            position: relative;
+            color: #ff9900;
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .hero-title span {
+            position: relative;
+            display: block;
+            text-align: center;
+        }
+
+        .hero-title span::before {
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            text-align: center;
+            z-index: -1;
+            color: transparent;
+            -webkit-text-stroke: 6px #ffffff;
+        }
+
+        .main-content {
+            position: relative;
+            background-color: #ffffff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+            z-index: 10;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            border-bottom: 3px solid #ff9900;
+            padding-bottom: 10px;
+            color: #ff9900;
+            font-size: 2rem;
+            margin-top: 40px;
+        }
+
+        h3 {
+            color: #ff9900;
+            border-left: 5px solid #ff9900;
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+
+        p, li {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        a {
+            color: #ff9900;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #007bbf;
+            color: #ffffff;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin: 10px 0;
+            transition: opacity 0.2s;
+        }
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .grid-staff, .grid-sponsor {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .staff-card {
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 15px 10px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+
+        .staff-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: none;
+        }
+        
+        .staff-card p {
+            margin: 10px 0 0 0;
+            line-height: 1.4;
+            font-size: 1rem;
+        }
+
+        .sponsor-card {
+            text-align: center;
+        }
+
+        .sponsor-card img {
+            width: 100%;
+            max-width: 180px;
+            height: auto;
+            border-radius: 6px;
+            transition: transform 0.2s;
+        }
+        .sponsor-card img:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem; }
+            .grid-2 { grid-template-columns: 1fr; }
+            .grid-staff { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 480px) {
+            .grid-staff { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-outer">
+        <div class="hero-bg" id="parallax-bg"></div>
+        <div class="hero-content">
+            <h1 class="hero-title"><span data-text="第10回">第10回</span><span data-text="フラット集会">フラット集会</span></h1>
+        </div>
+    </div>
+
+    <div class="main-content">
+        
+        <section id="summary">
+            <h2>イベント概要</h2>
+            <div class="grid-2">
+                <div>
+                    <p><a href="https://booth.pm/ja/items/3562180" target="_blank">フラット</a>ユーザのための気軽な交流イベントです。</p>
+                    
+                    <ul>
+                        <li>開催日時：2026/7/4(土) 22:00～23:00 (JST)</li>
+                        <li>集合写真：22:50</li>
+                        <li>開催場所：フラット集会（VRC上のワールド）</li>
+                        <li>Quest対応：○</li>
+                    </ul>
+                </div>
+                <div style="text-align: center;">
+                    <img src="images/SelfPoster/full.webp" alt="ポスター" style="max-width:100%; height:auto; border-radius:8px;">
+                    <br>
+                    <a href="images/SelfPoster/full.png" download class="btn" style="margin-top: 15px; background-color: #ff9900;">ポスターをダウンロード (PNG)</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="join">
+            <h2>参加方法</h2>
+            <div class="grid-2">
+                <div>
+                    <ol>
+                        <li>VRCのグループ「フラット」にご参加ください。</li>
+                        <li>当日、グループ「フラット」にてGroup+インスタンスを作成いたします。</li>
+                        <li>そちらへのJoinをお願いします。</li>
+                    </ol>
+                    <div style="text-align: center;">
+                        <a href="https://vrchat.com/home/group/grp_f15bceb1-874a-4458-a494-56ece83d0683" target="_blank" class="btn">フラット (FLAT.5121) グループ</a>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <img src="images/Info/group.jpg" alt="参加方法" style="max-width:100%; height:auto; border-radius:8px;">
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <h2>FAQ</h2>
+            <div class="grid-2">
+                <div>
+                    <p><strong>Q: アバター指定はありますか？</strong><br>
+                    A: 「<a href="https://booth.pm/ja/items/3562180" target="_blank">フラット</a>」「<a href="https://booth.pm/ja/items/5780006" target="_blank">フラット 2nd</a>」「<a href="https://booth.pm/ja/items/7537714" target="_blank">フラット IF</a>」「<a href="https://booth.pm/ja/items/7922210" target="_blank">フラット4th</a>」をご利用ください。</p>
+                    
+                    <p><strong>Q: 指定アバターを持っていないと参加できませんか？</strong><br>
+                    A: サンプルのペデスタルを用意しております。お気軽にお越しください。</p>
+                    
+                    <p><strong>Q: 動画撮影は可能ですか？</strong><br>
+                    A: 周囲の方の許可を得てマナーの範囲内で。SNS投稿時は音声OFFなどご配慮ください。スタッフが広報用に撮影する場合もあります。</p>
+                </div>
+                <div style="text-align: center;">
+                    <img src="images/Info/hatena.jpg" alt="FAQ" style="max-width:100%; height:auto; border-radius:8px;">
+                </div>
+            </div>
+        </section>
+
+        <section id="staff">
+            <h2>スタッフ</h2>
+            
+            <h3>スタッフ一覧</h3>
+            <div class="grid-staff">
+                <div class="staff-card">
+                    <img src="images/StaffIco/pandra.jpg" alt="ぱんドラ">
+                    <p><strong>ぱんドラ</strong><br><small>主催</small></p>
+                </div>
+                <div class="staff-card">
+                    <img src="images/StaffIco/makkuro.jpg" alt="まっくろ">
+                    <p><strong>まっくろ</strong><br><small>広報・ワールド</small></p>
+                </div>
+                <div class="staff-card">
+                    <img src="images/StaffIco/tora.jpg" alt="korsk_tora">
+                    <p><strong>korsk_tora</strong><br><small>広報・当日</small></p>
+                </div>
+                <div class="staff-card">
+                    <img src="images/StaffIco/ryu.jpg" alt="--龍--">
+                    <p><strong>--龍--</strong><br><small>当日</small></p>
+                </div>
+                <div class="staff-card">
+                    <img src="images/StaffIco/roddo.jpg" alt="ロッド">
+                    <p><strong>ロッド</strong><br><small>当日</small></p>
+                </div>
+                <div class="staff-card">
+                    <img src="images/StaffIco/osaki.jpg" alt="おおさきくん">
+                    <p><strong>おおさきくん</strong><br><small>当日</small></p>
+                </div>
+                <div class="staff-card">
+                    <img src="images/StaffIco/teto.jpg" alt="てと！"> 
+                    <p><strong>てと！</strong><br><small>当日</small></p>
+                </div>
+                <div class="staff-card">
+                    <img src="images/StaffIco/morikinton.jpg" alt="モリきんとん">
+                    <p><strong>モリきんとん</strong><br><small>当日</small></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sponsor">
+            <h2>協賛</h2>
+            
+            <h3>協賛募集</h3>
+            <p>「フラット集会」は宣伝用ポスターを用意しており、宣伝にご協力いただけるワールド・イベントを募集しています。協賛イベント/ワールドのポスターを集会所・当サイトに掲載させて頂きます。お気軽にご連絡ください。</p>
+            <a href="https://drive.google.com/drive/folders/1OJ1L3cfT1PxTF9syoDEslNsh6RG7uhdv" target="_blank" class="btn" style="background-color:#4caf50;">ポスターデータ</a>
+
+            <h3>協賛イベント等</h3>
+            <p>次のワールド・イベント等にご協力頂きました。厚く御礼申し上げます。</p>
+            
+            <div class="grid-sponsor">
+                <div class="sponsor-card">
+                    <a href="https://vrchat.com/home/launch?worldId=wrld_935ba54d-727a-45a3-b81d-107f0fa860d1" target="_blank">
+                        <img src="images/3rdPoster/zundoko.jpg" alt="KemonoBarずんどこ">
+                    </a>
+                    <p><small>KemonoBarずんどこ</small></p>
+                </div>
+                <div class="sponsor-card">
+                    <a href="https://vrchat.com/home/launch?worldId=wrld_17777e91-3c5f-4079-9291-9b0cd3d636a1" target="_blank">
+                        <img src="images/3rdPoster/Qkemonosyuukaijyo.jpg" alt="QuestKemono集会場">
+                    </a>
+                    <p><small>QuestKemono集会場</small></p>
+                </div>
+                <div class="sponsor-card">
+                    <a href="https://vrchat.com/home/group/grp_5f1e6c1d-7584-47ff-ab0d-1305fb30af43" target="_blank">
+                        <img src="images/3rdPoster/Heon.jpg" alt="ヘオンのたまり場">
+                    </a>
+                    <p><small>ヘオンのたまり場</small></p>
+                </div>
+
+                <div class="sponsor-card">
+                    <a href="https://x.com/Cafe_HidamariVR" target="_blank">
+                        <img src="images/3rdPoster/Hidamari.jpg" alt="和風かふぇひだまり">
+                    </a>
+                    <p><small>和風かふぇひだまり</small></p>
+                </div>
+                <div class="sponsor-card">
+                    <a href="https://x.com/kemonoclub_vrc" target="_blank">
+                        <img src="images/3rdPoster/kemocafe.jpg" alt="KemoCafe">
+                    </a>
+                    <p><small>KemoCafe</small></p>
+                </div>
+                <div class="sponsor-card">
+                    <a href="https://vrchat.com/home/launch?worldId=wrld_65861329-0084-414b-a732-b3ac1230a358" target="_blank">
+                        <img src="images/3rdPoster/FlatDressMuseum.jpg" alt="FlatDressMuseum">
+                    </a>
+                    <p><small>FlatDressMuseum</small></p>
+                </div>
+            </div>
+        </section>
+
+        <footer style="text-align: center; margin-top: 80px; padding-top: 20px; border-top: 1px solid #ddd;">
+            <small style="color: #666;">© 2026 The 10th Flat Meetup</small>
+        </footer>
+
+    </div>
+
+    <script>
+        const bg = document.getElementById('parallax-bg');
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            bg.style.transform = `translateY(${scrolled * 0.6}px)`;
+        });
+    </script>
+</body>
+</html>
