@@ -55,4 +55,4 @@ BOOTHで買い物をするには、無料の **pixiv ID** が必要になりま�
 ---
 
 次のステップでは、購入したフラットくんをいよいよVRChatにアップロードして、ゲーム内で使えるようにする具体的な操作を説明します。
-[次のステップへ：ALCOMとUnityをインストールする](/FlatSiteTest/guide/5-setup/)
+[次のステップへ：ALCOMとUnityをインストールする](/guide/5-setup/)

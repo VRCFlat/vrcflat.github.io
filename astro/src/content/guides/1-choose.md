@@ -12,19 +12,19 @@ keywords: ["VRC ケモノ", "アバター", "フラット族"]
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.25rem; margin: 2rem 0;">
   <div style="text-align: center; padding: 0.5rem;">
-    <img class="transparent-img" src="/FlatSiteTest/images/APose/FlatNormalA.webp" alt="無印バージョン Aポーズ" style="width: 100%; display: block; margin: 0 auto 0.5rem auto;" />
+    <img class="transparent-img" src="/images/APose/FlatNormalA.webp" alt="無印バージョン Aポーズ" style="width: 100%; display: block; margin: 0 auto 0.5rem auto;" />
     <span style="font-weight: 800; font-size: 0.9rem; color: var(--color-text);">無印 (Original)</span>
   </div>
   <div style="text-align: center; padding: 0.5rem;">
-    <img class="transparent-img" src="/FlatSiteTest/images/APose/Flat2ndA.webp" alt="2nd Anniversary Aポーズ" style="width: 100%; display: block; margin: 0 auto 0.5rem auto;" />
+    <img class="transparent-img" src="/images/APose/Flat2ndA.webp" alt="2nd Anniversary Aポーズ" style="width: 100%; display: block; margin: 0 auto 0.5rem auto;" />
     <span style="font-weight: 800; font-size: 0.9rem; color: var(--color-text);">2nd Anniv.</span>
   </div>
   <div style="text-align: center; padding: 0.5rem;">
-    <img class="transparent-img" src="/FlatSiteTest/images/APose/Flat4thA.webp" alt="4th Anniversary Aポーズ" style="width: 100%; display: block; margin: 0 auto 0.5rem auto;" />
+    <img class="transparent-img" src="/images/APose/Flat4thA.webp" alt="4th Anniversary Aポーズ" style="width: 100%; display: block; margin: 0 auto 0.5rem auto;" />
     <span style="font-weight: 800; font-size: 0.9rem; color: var(--color-text);">4th Anniv.</span>
   </div>
   <div style="text-align: center; padding: 0.5rem;">
-    <img class="transparent-img" src="/FlatSiteTest/images/APose/FlatIFA.webp" alt="If Ver Aポーズ" style="width: 100%; display: block; margin: 0 auto 0.5rem auto;" />
+    <img class="transparent-img" src="/images/APose/FlatIFA.webp" alt="If Ver Aポーズ" style="width: 100%; display: block; margin: 0 auto 0.5rem auto;" />
     <span style="font-weight: 800; font-size: 0.9rem; color: var(--color-text);">If Ver.</span>
   </div>
 </div>
@@ -188,7 +188,7 @@ keywords: ["VRC ケモノ", "アバター", "フラット族"]
 
 ### 個性きわだつ派生アバター「フラット族」
 
-<img class="transparent-img" src="/FlatSiteTest/images/Flats.webp" alt="フラットシリーズ4体集合イメージ" style="width: 100%; display: block; margin: 2rem 0; box-shadow: none !important;" />
+<img class="transparent-img" src="/images/Flats.webp" alt="フラットシリーズ4体集合イメージ" style="width: 100%; display: block; margin: 2rem 0; box-shadow: none !important;" />
 
 「フラットくんも好きだけど、もう少し違った特徴がある子がいいな…」という方に朗報です！
 フラットくんの素体・世界観をベースにして作られた、公式派生アバター **「フラット族」** がBOOTHにてリリースされています。それぞれ異なる魅力を持っているので、お気に入りの子を探してみよう！

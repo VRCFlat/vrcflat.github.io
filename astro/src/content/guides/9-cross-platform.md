@@ -14,7 +14,7 @@ keywords: ["VRC Quest対応", "VRChat アバター Quest化", "VRCQuestTools 使
 この手順では、**「とにかく簡単」「とりあえず表示される」** ことを最優先にした一番シンプルな対応手順をご紹介します！
 （よりこだわりたい場合は様々な設定や手法がありますが、まずはここからスタートしてみましょう）
 
-まず事前準備として、**[VrcQuestTool.unitypackage](/FlatSiteTest/downloads/VrcQuestTool.unitypackage)** (クロスプラットフォーム対応ツール) をダウンロードしておいてください。
+まず事前準備として、**[VrcQuestTool.unitypackage](/downloads/VrcQuestTool.unitypackage)** (クロスプラットフォーム対応ツール) をダウンロードしておいてください。
 
 ---
 
@@ -24,39 +24,39 @@ VRCQuestToolsによるプラットフォーム変換を行う際、プロジェ�
 
 1. 自分のフラットくんが完成した状態（前ステップの作業が終わった状態）です。
 
-   ![アバターの完成状態](/FlatSiteTest/images/guides/cp/1.webp)
+   ![アバターの完成状態](/images/guides/cp/1.webp)
 
 2. 一度Unityを閉じます。保存（Save Scenes）を聞かれたら、忘れずに **「Save」** を押して保存してください。
 
-   ![Unityの保存ダイアログ](/FlatSiteTest/images/guides/cp/2.webp)
+   ![Unityの保存ダイアログ](/images/guides/cp/2.webp)
 
 3. ALCOMを起動し、作成した自分のプロジェクトの右側にある **`…`** ボタンをクリックして **「プロジェクトの保存場所を開く」** をクリックします。
 
-   ![プロジェクトの保存場所を開く](/FlatSiteTest/images/guides/cp/3.webp)
+   ![プロジェクトの保存場所を開く](/images/guides/cp/3.webp)
 
 4. エクスプローラーでフォルダが開くので、アドレスバーまたは **`↑`** ボタンを押して1つ上の階層（プロジェクトフォルダが並んでいる階層）に移動します。
 
-   ![1つ上の階層へ移動](/FlatSiteTest/images/guides/cp/4.webp)
+   ![1つ上の階層へ移動](/images/guides/cp/4.webp)
 
 5. コピー元となる自分のプロジェクトフォルダ（例：`MyFlatProject`）が選択されている状態になります。
 
-   ![プロジェクトフォルダの選択](/FlatSiteTest/images/guides/cp/5.webp)
+   ![プロジェクトフォルダの選択](/images/guides/cp/5.webp)
 
 6. フォルダをコピー（**`Ctrl + C`**）します。
 
-   ![フォルダをコピー](/FlatSiteTest/images/guides/cp/6.webp)
+   ![フォルダをコピー](/images/guides/cp/6.webp)
 
 7. 同じフォルダ内で貼り付け（**`Ctrl + V`**）を実行します（コピー処理に少し時間がかかります）。
 
-   ![フォルダを貼り付け](/FlatSiteTest/images/guides/cp/7.webp)
+   ![フォルダを貼り付け](/images/guides/cp/7.webp)
 
 8. コピーされた新しいフォルダ（例: `MyFlatProject - コピー`）が生成されます。
 
-   ![コピーフォルダの生成](/FlatSiteTest/images/guides/cp/8.webp)
+   ![コピーフォルダの生成](/images/guides/cp/8.webp)
 
 9. コピーしたフォルダのフォルダ名を分かりやすい名前に変更しておきます（例: クロスプラットフォーム対応なので `MyFlatProject_CP` など。適当で大丈夫です）。
 
-   ![フォルダ名の変更](/FlatSiteTest/images/guides/cp/9.webp)
+   ![フォルダ名の変更](/images/guides/cp/9.webp)
 
 ---
 
@@ -64,31 +64,31 @@ VRCQuestToolsによるプラットフォーム変換を行う際、プロジェ�
 
 1. ALCOMに戻り、画面右上にある「プロジェクトを作成」ボタンの右隣にある **矢印（▼）** をクリックし、 **「既存のプロジェクトを追加」** を選択します。
 
-   ![既存のプロジェクトを追加](/FlatSiteTest/images/guides/cp/10.webp)
+   ![既存のプロジェクトを追加](/images/guides/cp/10.webp)
 
 2. フォルダの選択ダイアログが表示されるので、先ほど作成（リネーム）したコピー版のフォルダを選択します。
 
-   ![コピーフォルダを選択](/FlatSiteTest/images/guides/cp/11.webp)
+   ![コピーフォルダを選択](/images/guides/cp/11.webp)
 
 3. ALCOMのプロジェクト一覧に新しく追加されるので、それを確認して **「UNITYを開く」** ボタンをクリックします。
 
-   ![新プロジェクトでUNITYを開く](/FlatSiteTest/images/guides/cp/12.webp)
+   ![新プロジェクトでUNITYを開く](/images/guides/cp/12.webp)
 
 4. コピー元のプロジェクトと全く同じ状態のUnity画面が開きます。
 
-   ![Unityの起動完了](/FlatSiteTest/images/guides/cp/13.webp)
+   ![Unityの起動完了](/images/guides/cp/13.webp)
 
 ---
 
 ### Step 3. VRCQuestToolsを導入する
 
-1. 事前準備でダウンロードしておいた **[VrcQuestTool.unitypackage](/FlatSiteTest/downloads/VrcQuestTool.unitypackage)** をダブルクリックしてインポート（Import）します。
+1. 事前準備でダウンロードしておいた **[VrcQuestTool.unitypackage](/downloads/VrcQuestTool.unitypackage)** をダブルクリックしてインポート（Import）します。
 
-   ![VrcQuestToolをインポート](/FlatSiteTest/images/guides/cp/14.webp)
+   ![VrcQuestToolをインポート](/images/guides/cp/14.webp)
 
 2. インポート処理が進むと「Confirm」画面が表示されるので、 **「Install」** をクリックします。
 
-   ![VrcQuestToolのインストール](/FlatSiteTest/images/guides/cp/15.webp)
+   ![VrcQuestToolのインストール](/images/guides/cp/15.webp)
 
 ---
 
@@ -96,11 +96,11 @@ VRCQuestToolsによるプラットフォーム変換を行う際、プロジェ�
 
 1. Unityの上部メニューから、 **「Tools」 ＞ 「VRCQuestTools」 ＞ 「Show Avatar Builder」** を選択します。
 
-   ![Avatar Builderを起動](/FlatSiteTest/images/guides/cp/16.webp)
+   ![Avatar Builderを起動](/images/guides/cp/16.webp)
 
 2. 「VQT Avatar Builder」というウインドウが開くので、その中にある **「開く」** ボタンをクリックします。
 
-   ![Avatar Builderの開くボタン](/FlatSiteTest/images/guides/cp/17.webp)
+   ![Avatar Builderの開くボタン](/images/guides/cp/17.webp)
 
 3. VRChat SDKのコントロールパネルが表示されます。「Platform(s)」の項目で **`Windows` のチェックを外し、代わりに `Android` にチェックを入れます**。
 
@@ -112,23 +112,23 @@ VRCQuestToolsによるプラットフォーム変換を行う際、プロジェ�
 > ALCOMの初期設定（Step 5. の環境構築ガイド）でチェックを忘れてしまっていた場合は、**[VRC Quest Tools チュートリアルページ（環境構築）](https://kurotu.github.io/VRCQuestTools/ja/docs/tutorial/set-up-environment)**を参考にして、Unity Hubから追加のモジュールをインストールしてください。
 
 
-   ![Androidプラットフォームに切り替え](/FlatSiteTest/images/guides/cp/18.webp)
+   ![Androidプラットフォームに切り替え](/images/guides/cp/18.webp)
 
 4. 「切り替えに時間がかかります」という旨の確認ダイアログが表示されるので、 **「Confirm」** をクリックしてしばらく待ちます。
 
-   ![Confirmダイアログ](/FlatSiteTest/images/guides/cp/19.webp)
+   ![Confirmダイアログ](/images/guides/cp/19.webp)
 
 5. 切り替え完了後、VQT Avatar Builderウインドウの **「Build & Publish for Android」** ボタンをクリックします。
 
-   ![Android向けビルド＆パブリッシュ](/FlatSiteTest/images/guides/cp/20.webp)
+   ![Android向けビルド＆パブリッシュ](/images/guides/cp/20.webp)
 
 6. VRChat SDK側で最終確認のダイアログが出るので、 **「OK」** をクリックします。
 
-   ![アップロード確認OK](/FlatSiteTest/images/guides/cp/21.webp)
+   ![アップロード確認OK](/images/guides/cp/21.webp)
 
 7. しばらく処理が進み、VQT Avatar Builderに **「アップロードに成功しました。」** と表示されれば、Android対応は完了です！
 
-   ![Android対応の成功](/FlatSiteTest/images/guides/cp/22.webp)
+   ![Android対応の成功](/images/guides/cp/22.webp)
 
 ---
 
@@ -138,11 +138,11 @@ VRCQuestToolsによるプラットフォーム変換を行う際、プロジェ�
 
 1. VRChat SDKコントロールパネルの「Platform(s)」で、**`Android` のチェックを外し、代わりに `iOS` にチェックを入れます**。
 
-   ![iOSプラットフォームに切り替え](/FlatSiteTest/images/guides/cp/23.webp)
+   ![iOSプラットフォームに切り替え](/images/guides/cp/23.webp)
 
 2. 同様に、VQT Avatar Builderウインドウの **「Build & Publish for iOS」** ボタンをクリックし、SDK側の確認ダイアログで「OK」をクリックして進めます。アップロード完了までしばらく待ちます。
 
-   ![iOS向けアップロード成功](/FlatSiteTest/images/guides/cp/24.webp)
+   ![iOS向けアップロード成功](/images/guides/cp/24.webp)
 
 ---
 
@@ -151,7 +151,7 @@ VRCQuestToolsによるプラットフォーム変換を行う際、プロジェ�
 アップロード完了後、VRChat公式Webサイト（マイページ）やゲーム内でアバターの情報を確認してみましょう。
 アバターの対応プラットフォーム（プラットフォーム表記）欄に、**Windows・Android・iOSの3つのマーク**がすべて点灯していれば、完璧です！
 
-![3プラットフォームのマーク点灯](/FlatSiteTest/images/guides/cp/25.webp)
+![3プラットフォームのマーク点灯](/images/guides/cp/25.webp)
 
 これで、Quest単体やスマホから遊んでいるフレンドからも、あなたの可愛い姿が正常に見えるようになります！
 
@@ -163,11 +163,11 @@ VRCQuestToolsによるプラットフォーム変換を行う際、プロジェ�
 
 1. Unityを終了し、ALCOMで、先ほど追加したコピープロジェクトの右側にある **`…`** ボタンをクリックし、 **「プロジェクトを削除」** をクリックします。
 
-   ![ALCOMからコピープロジェクトを削除](/FlatSiteTest/images/guides/cp/26.webp)
+   ![ALCOMからコピープロジェクトを削除](/images/guides/cp/26.webp)
 
 2. 確認ダイアログが表示されるので、 **「プロジェクトのファイルも削除する」** にチェックを入れて削除を完了します。
 
-   ![プロジェクトファイルの完全削除](/FlatSiteTest/images/guides/cp/27.webp)
+   ![プロジェクトファイルの完全削除](/images/guides/cp/27.webp)
 
 これで後片付けもすべて完了です！本当にお疲れ様でした！
 

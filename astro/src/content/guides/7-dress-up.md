@@ -6,7 +6,7 @@ seoTitle: "【VRChat】初心者でもできるアバター着せ替え！Modula
 keywords: ["VRC アバター 着せ替え Modular Avatar", "VRChat 服 着せ替え ツール", "Modular Avatar 使い方"]
 ---
 > [!IMPORTANT]
-> このステップでは、すでにフラットくんのプロジェクトが用意されていることを前提としています。まだプロジェクトがない場合は、[前のステップ](/FlatSiteTest/guide/6-upload/)を参照してください。
+> このステップでは、すでにフラットくんのプロジェクトが用意されていることを前提としています。まだプロジェクトがない場合は、[前のステップ](/guide/6-upload/)を参照してください。
 
 フラットくんはデフォルトの姿でも十分可愛いですが、オシャレな服を着せて「自分だけの個性」を出したくなったら、着替えに挑戦しましょう！
 
@@ -14,9 +14,9 @@ keywords: ["VRC アバター 着せ替え Modular Avatar", "VRChat 服 着せ替
 
 ### 🔌 事前準備：お気に入りの服をダウンロードする
 
-1. [アイテム一覧ページの「衣装」セクション](/FlatSiteTest/items/#cat-cloth)を訪れて、お気に入りの服を見つけてください。
+1. [アイテム一覧ページの「衣装」セクション](/items/#cat-cloth)を訪れて、お気に入りの服を見つけてください。
 
-   ![アイテム一覧](/FlatSiteTest/images/guides/dressup/0.webp)
+   ![アイテム一覧](/images/guides/dressup/0.webp)
 
 2. 無償の服もたくさんあるので、まずはそれらで試すのがおすすめです。
    気に入った服の `.unitypackage` をダウンロードしておきましょう。
@@ -27,21 +27,21 @@ keywords: ["VRC アバター 着せ替え Modular Avatar", "VRChat 服 着せ替
 
 1. ALCOMまたはVCCを起動し、フラットくんのアップロード用プロジェクトを「**UNITYを開く**」ボタンで開きます。
 
-   ![プロジェクトを開く](/FlatSiteTest/images/guides/dressup/1.webp)
+   ![プロジェクトを開く](/images/guides/dressup/1.webp)
 
 2. 右上の「**Scene**」ビューにある白い立方体をクリックします。
 
    「遠近感のない状態」になるので、左側「**Hierarchy**」のフラットのプレハブを**ダブルクリック**します。
 
-   ![Hierarchyのフラットプレハブをダブルクリック](/FlatSiteTest/images/guides/dressup/2.webp)
+   ![Hierarchyのフラットプレハブをダブルクリック](/images/guides/dressup/2.webp)
 
 3. フラットがアップになるので、右上の白い立方体についている**青い矢印(z)**をクリックします。
 
-   ![z軸をクリック](/FlatSiteTest/images/guides/dressup/3.webp)
+   ![z軸をクリック](/images/guides/dressup/3.webp)
 
 4. フラットが正面を向く状態になります。
 
-   ![フラットが正面を向く](/FlatSiteTest/images/guides/dressup/4.webp)
+   ![フラットが正面を向く](/images/guides/dressup/4.webp)
 
 ---
 
@@ -49,7 +49,7 @@ keywords: ["VRC アバター 着せ替え Modular Avatar", "VRChat 服 着せ替
 
 1. 準備段階でダウンロードした好みの衣装の`.unitypackage`を**ダブルクリック**してインポートします。
 
-   ![衣装パッケージをインポート](/FlatSiteTest/images/guides/dressup/5.webp)
+   ![衣装パッケージをインポート](/images/guides/dressup/5.webp)
 
    > [!TIP]
    > インポート画面をよく見て、どこにインポートされるか確認しておくことをお勧めします。
@@ -60,13 +60,13 @@ keywords: ["VRC アバター 着せ替え Modular Avatar", "VRChat 服 着せ替
 
 1. `*.prefab`（プレハブファイル）のあるフォルダをProjectで開きます。
 
-   ![Prefabフォルダを開く](/FlatSiteTest/images/guides/dressup/6.webp)
+   ![Prefabフォルダを開く](/images/guides/dressup/6.webp)
 
 2. フラット対応のprefabを、Hierarchy上で**フラットくんの直下**にドラッグ＆ドロップします。
 
 3. Hierarchy上の表示が次の画像の通りになり、見た目も着せていれば成功です！
 
-   ![配置成功](/FlatSiteTest/images/guides/dressup/7.webp)
+   ![配置成功](/images/guides/dressup/7.webp)
 
 ---
 
@@ -81,7 +81,7 @@ keywords: ["VRC アバター 着せ替え Modular Avatar", "VRChat 服 着せ替
 >
 > 衣装がアバターの外に置かれてしまうと、位置がずれてしまいます。
 >
-> ![失敗例](/FlatSiteTest/images/guides/dressup/8.webp)
+> ![失敗例](/images/guides/dressup/8.webp)
 >
 > この状態からきれいに着せるのは難しいので、**Ctrl+z**を押して元に戻し、手順をやり直しましょう。
 

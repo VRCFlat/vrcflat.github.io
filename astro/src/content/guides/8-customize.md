@@ -23,14 +23,14 @@ keywords: ["VRC アバター 改変 テクスチャ", "VRChat アバター 色�
 1. Unityでフラットくんのプロジェクトを開きます。
 2. 下部の「Project」ウィンドウで **`tex`** フォルダを開きます。
 
-   ![texフォルダを開く](/FlatSiteTest/images/guides/color-change/1.webp)
+   ![texフォルダを開く](/images/guides/color-change/1.webp)
 
 3. 適当なテクスチャ（例：`body`など）を右クリックし、「**Show in Explorer**」をクリックします。
-   ![Show in Explorer](/FlatSiteTest/images/guides/color-change/2.webp)
+   ![Show in Explorer](/images/guides/color-change/2.webp)
 
 4. エクスプローラーが起動し、テクスチャファイルの保存先が表示されます。エクスプローラーのアドレスバーをクリックして、**フォルダのパス（保存場所）をコピー**しておきます。
-   ![パスのコピー](/FlatSiteTest/images/guides/color-change/3.webp)
-   ![エクスプローラーでパスをコピー](/FlatSiteTest/images/guides/color-change/4.webp)
+   ![パスのコピー](/images/guides/color-change/3.webp)
+   ![エクスプローラーでパスをコピー](/images/guides/color-change/4.webp)
 
 ---
 
@@ -39,24 +39,24 @@ keywords: ["VRC アバター 改変 テクスチャ", "VRChat アバター 色�
 次に、ダウンロードしたフラットくんの製品パッケージに含まれる「テクスチャPSDファイル」をGIMPで開いて準備します。
 
 1. フラットくんをダウンロードして解凍したフォルダを開き、その中にある **「フラットテクスチャファイル」** フォルダを開きます。
-   ![テクスチャフォルダを開く](/FlatSiteTest/images/guides/color-change/5.webp)
+   ![テクスチャフォルダを開く](/images/guides/color-change/5.webp)
 
 2. **`body.psd`** をダブルクリック、またはGIMPにドラッグ＆ドロップして開きます。
-   ![GIMPでbody.psdを開く](/FlatSiteTest/images/guides/color-change/6.webp)
+   ![GIMPでbody.psdを開く](/images/guides/color-change/6.webp)
 
 3. GIMPのメニューから「**ファイル**」＞「**名前を付けて保存**」を選択します。
-   ![名前を付けて保存](/FlatSiteTest/images/guides/color-change/7.webp)
+   ![名前を付けて保存](/images/guides/color-change/7.webp)
 
 4. 保存ダイアログが表示されたら、名前の入力欄をクリックします。
-   ![名前欄の選択](/FlatSiteTest/images/guides/color-change/8.webp)
+   ![名前欄の選択](/images/guides/color-change/8.webp)
 
 5. 先ほどUnityのエクスプローラーからコピーしておいたフォルダのパスをアドレス欄に貼り付けて、**Enter**キーを押してUnityの `tex` フォルダへ移動します。
-   ![パスの貼り付け](/FlatSiteTest/images/guides/color-change/9.webp)
+   ![パスの貼り付け](/images/guides/color-change/9.webp)
 
 6. ファイル名を **`.body.xcf`** に変更して保存します。
    **【重要】 ファイル名の頭にドット `.` をつけるのが非常に重要です！**
 
-   ![.body.xcfで保存](/FlatSiteTest/images/guides/color-change/10.webp)
+   ![.body.xcfで保存](/images/guides/color-change/10.webp)
 
    > [!WARNING]
    > **なぜ頭に `.` をつけるの？**
@@ -65,7 +65,7 @@ keywords: ["VRC アバター 改変 テクスチャ", "VRChat アバター 色�
 7. 同様にして、`bodyE.psd`、`karada.psd`、`mofu.psd` もそれぞれ開いて、Unityの `tex` フォルダ内に **`.bodyE.xcf`**、**`.karada.xcf`**、**`.mofu.xcf`** という名前で保存します。
    (※無印「フラット」以外のアバターバージョンでは `cloth.psd` など衣装のPSDもあるため、それらも同様に作業用 `.xcf` ファイルとして保存しておきます)
 
-   ![他のファイルも保存](/FlatSiteTest/images/guides/color-change/11.webp)
+   ![他のファイルも保存](/images/guides/color-change/11.webp)
 
 ---
 
@@ -75,8 +75,8 @@ keywords: ["VRC アバター 改変 テクスチャ", "VRChat アバター 色�
 
 1. 先ほどUnityの `tex` フォルダに保存した **`.body.xcf`** をGIMPで開きます。
 2. 画面右下の「レイヤー」タブから、ベージュ色で塗られている **「メイン」** というレイヤーをクリックして選択します。
-   ![メインレイヤーを選択](/FlatSiteTest/images/guides/color-change/12.webp)
-   ![レイヤーの拡大](/FlatSiteTest/images/guides/color-change/13.webp)
+   ![メインレイヤーを選択](/images/guides/color-change/12.webp)
+   ![レイヤーの拡大](/images/guides/color-change/13.webp)
 
 色の変え方には、仕上がりを見ながら調整する [`「感覚派向けの方法」`](#パターンa直感的に色を決める感覚派向けの方法) と、最初からカラーコードを指定してきれいに塗る [`「理論派向けの方法」`](#パターンbカラーコードできっちり決める理論派向けの方法) の2種類があります。好みに合わせて選んでみてください！
 
@@ -84,31 +84,31 @@ keywords: ["VRC アバター 改変 テクスチャ", "VRChat アバター 色�
 画面を見ながらスライダーをいじって、お気に入りの色を探したい方におすすめの手順です。
 
 1. GIMPの上部メニューから、「**色**」＞「**色相・彩度**」を選択します。
-   ![色相・彩度を選択](/FlatSiteTest/images/guides/color-change/14.webp)
+   ![色相・彩度を選択](/images/guides/color-change/14.webp)
 
 2. 表示された設定ダイアログで「色相」「輝度」「彩度」のバーを左右に動かし、プレビューを見ながら好きな色に調整して「OK」をクリックします。
-   ![色を調整](/FlatSiteTest/images/guides/color-change/15.webp)
+   ![色を調整](/images/guides/color-change/15.webp)
 
 #### パターンB：カラーコードできっちり決める「理論派向けの方法」
 あらかじめ使いたいカラーコードが決まっていて、単色できれいに塗りつぶしたい場合におすすめの手順です。
 
 1. レイヤー一覧にある「メイン」を右クリックし、「**レイヤーマスクの追加**」をクリックします。
-   ![レイヤーマスクの追加](/FlatSiteTest/images/guides/color-change/16.webp)
+   ![レイヤーマスクの追加](/images/guides/color-change/16.webp)
 
 2. オプション画面で「**レイヤーのアルファチャンネルを移転**」を選択し、「**追加**」ボタンを押します。
-   ![アルファチャンネルを移転](/FlatSiteTest/images/guides/color-change/17.webp)
+   ![アルファチャンネルを移転](/images/guides/color-change/17.webp)
 
 3. 「メイン」レイヤーのサムネイルの右側に、白黒のマスク画像が追加されたことを確認します。
-   ![マスク追加の確認](/FlatSiteTest/images/guides/color-change/18.webp)
+   ![マスク追加の確認](/images/guides/color-change/18.webp)
 
 4. カラーパレットから変更したい色（メインに塗りたいお好みの色）を選択します。
-   ![カラーパレット選択](/FlatSiteTest/images/guides/color-change/19.webp)
+   ![カラーパレット選択](/images/guides/color-change/19.webp)
 
 5. 「メイン」レイヤーの**ベージュ色のサムネイルの側**（追加したマスクではなく、元の画像サムネイル）をクリックして選択します。
-   ![元のサムネイルを選択](/FlatSiteTest/images/guides/color-change/20.webp)
+   ![元のサムネイルを選択](/images/guides/color-change/20.webp)
 
 6. キーボードの **`Ctrl + .`** （描画色での塗りつぶしショートカットキー）を押します。レイヤーが指定した色で綺麗に塗りつぶされます。
-   ![塗りつぶし実行](/FlatSiteTest/images/guides/color-change/21.webp)
+   ![塗りつぶし実行](/images/guides/color-change/21.webp)
 
 ---
 
@@ -117,26 +117,26 @@ keywords: ["VRC アバター 改変 テクスチャ", "VRChat アバター 色�
 色を変更できたら、Unityがテクスチャとして読み込める画像形式（PNG）でエクスポート（書き出し）します。
 
 1. キーボードの **`Ctrl + E`** を押して、エクスポート画面を開きます。
-   ![エクスポート画面を開く](/FlatSiteTest/images/guides/color-change/22.webp)
+   ![エクスポート画面を開く](/images/guides/color-change/22.webp)
 
 2. ファイル名の先頭にあるドットを削除して、**`body.png`** に変更します。
    (※または、画面の下部リストにある既存の `body.png` をダブルクリックして選択しても構いません)
 3. 「エクスポート」をクリックすると上書き保存の警告画面が出るので、「**置き換え**」をクリックします。
-   ![置き換えを選択](/FlatSiteTest/images/guides/color-change/23.webp)
+   ![置き換えを選択](/images/guides/color-change/23.webp)
 
 4. ワンテンポ遅れて「画像をPNGでエクスポート」という設定ウィンドウがポップアップします。（※非常に見落としやすいので注意！）
    この画面で「**エクスポート**」ボタンを押します。
-   ![エクスポート設定ウィンドウ](/FlatSiteTest/images/guides/color-change/24.webp)
+   ![エクスポート設定ウィンドウ](/images/guides/color-change/24.webp)
 
    > [!TIP]
    > このとき、**Compression level (圧縮レベル)を 0** に設定しておくのがおすすめです。圧縮に時間がかからなくなるため、保存や書き出しが非常にスムーズになります。
    > (※圧縮レベルを0にするとファイルの容量は大きくなりますが、VRChatにアバターをアップロードする際にUnity側で自動的に圧縮されるため、他プレイヤーへの影響は心配ありません)
 
 5. エクスポートした直後の状態では、まだUnity上のフラットくんの見た目は変わっていません。
-   ![Unityの画面(未更新)](/FlatSiteTest/images/guides/color-change/25.webp)
+   ![Unityの画面(未更新)](/images/guides/color-change/25.webp)
 
 6. Unityの画面をクリックしてアクティブ（操作可能状態）にすると、自動的に画像データの再読み込みが走り、フラットくんの色が先ほど変更したお好みの色に変わります！
-   ![Unityの画面(更新後)](/FlatSiteTest/images/guides/color-change/26.webp)
+   ![Unityの画面(更新後)](/images/guides/color-change/26.webp)
 
 7. 一度エクスポートしたら、以降はCtrl+Eを押すだけで一発でエクスポートできるようになります。
 
@@ -147,7 +147,7 @@ keywords: ["VRC アバター 改変 テクスチャ", "VRChat アバター 色�
 #### 作業ファイルのこまめな保存
 エクスポートしただけでは、GIMPのレイヤー情報などが保存されません。作業を途中でやめたり、後から調整できるようにするために、GIMP側でもこまめに **`Ctrl + S`** を押して保存（XCFファイルとしての保存）を忘れないようにしましょう！
 
-![Ctrl+Sで作業保存](/FlatSiteTest/images/guides/color-change/27.webp)
+![Ctrl+Sで作業保存](/images/guides/color-change/27.webp)
 
 #### 瞳や目を光らせたい場合
 目をはじめとする一部のパーツの色を綺麗に変えるには、**`body` と `bodyE` の両方の色を変更する**必要があります。
@@ -158,7 +158,7 @@ keywords: ["VRC アバター 改変 テクスチャ", "VRChat アバター 色�
 #### エクスポート中の真っ白・真っピンク画面に注意
 画像をエクスポートし始めた瞬間、または書き出し処理の最中に大急ぎでUnityの画面に切り替えると、画像の書き込みが完了していないため、Unity上でアバターが真っ白やピンク色のエラーテクスチャになってしまうことがあります。
 
-![エラーの真っ白画面](/FlatSiteTest/images/guides/color-change/28.webp)
+![エラーの真っ白画面](/images/guides/color-change/28.webp)
 
 この状態になっても慌てる必要はありません。画像の書き出しが終わるのを確認してから、一度他のフォルダを選択するなどして、再度Unityの画面をアクティブにすれば正常に読み込まれます。
 
@@ -167,5 +167,5 @@ keywords: ["VRC アバター 改変 テクスチャ", "VRChat アバター 色�
 これで自分だけのカラー改変手順は完了です。
 アバターの毛並みの色を大きく変える以外にも、模様を描き加えたり、服の色を変えてみる、模様をがらっと変更してみるなど、自由にアバターを彩ってみてください！
 
-[次のステップへ：アバターをクロスプラットフォーム（Quest・スマホ）に対応させる](/FlatSiteTest/guide/9-cross-platform/)
+[次のステップへ：アバターをクロスプラットフォーム（Quest・スマホ）に対応させる](/guide/9-cross-platform/)
 

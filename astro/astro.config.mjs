@@ -6,8 +6,8 @@ import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://pandrabox.github.io/FlatSiteTest',
-	base: '/FlatSiteTest',
+	site: 'https://vrcflat.github.io',
+	base: '/',
 	integrations: [mdx(), sitemap()],
 	fonts: [
 		{
