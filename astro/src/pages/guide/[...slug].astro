@@ -24,6 +24,48 @@ const sortedGuides = allGuides.sort((a, b) => a.data.stepNumber - b.data.stepNum
 const currentIndex = sortedGuides.findIndex((g) => g.id === guide.id);
 const prevGuide = currentIndex > 0 ? sortedGuides[currentIndex - 1] : null;
 const nextGuide = currentIndex < sortedGuides.length - 1 ? sortedGuides[currentIndex + 1] : null;
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": new URL(currentBase, Astro.site).toString()
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "入門ガイド",
+      "item": new URL(`${currentBase}guide/`, Astro.site).toString()
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": `STEP ${guide.data.stepNumber}: ${guide.data.title}`,
+      "item": new URL(`${currentBase}guide/${guide.id}/`, Astro.site).toString()
+    }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": guide.data.seoTitle,
+  "description": guide.data.description,
+  "url": new URL(`${currentBase}guide/${guide.id}/`, Astro.site).toString(),
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Organization",
+    "name": "フラットファンクラブ"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "フラットファンクラブ"
+  }
+};
 ---
 
 <!DOCTYPE html>
@@ -33,6 +75,8 @@ const nextGuide = currentIndex < sortedGuides.length - 1 ? sortedGuides[currentI
       title={`${guide.data.seoTitle} | フラットファンクラブ`} 
       description={guide.data.description} 
     />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
     <style>
       .guide-layout {
         max-width: 900px;

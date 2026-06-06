@@ -4,6 +4,28 @@ const currentBase = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BAS
 
 const SEO_TITLE = "第10回フラット集会";
 const SEO_DESCRIPTION = "2026年7月4日(土)開催！フラットユーザーのための気軽な交流イベント「第10回フラット集会」の特設ページです。イベント概要、参加方法、スタッフ、協賛イベントなどの情報を掲載しています。";
+
+const eventSchema = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": SEO_TITLE,
+  "description": SEO_DESCRIPTION,
+  "startDate": "2026-07-04T22:00:00+09:00",
+  "endDate": "2026-07-04T23:00:00+09:00",
+  "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "location": {
+    "@type": "VirtualLocation",
+    "url": "https://vrchat.com/home/group/grp_f15bceb1-874a-4458-a494-56ece83d0683"
+  },
+  "image": [
+    new URL(`${currentBase}images/mtup/10/SelfPoster/full.webp`, Astro.site).toString()
+  ],
+  "organizer": {
+    "@type": "Person",
+    "name": "ぱんドラ"
+  }
+};
 ---
 <!DOCTYPE html>
 <html lang="ja">
@@ -12,7 +34,13 @@ const SEO_DESCRIPTION = "2026年7月4日(土)開催！フラットユーザー�
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{SEO_TITLE}</title>
     <meta name="description" content={SEO_DESCRIPTION} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="sitemap" href={new URL(`${currentBase}sitemap-index.xml`, Astro.site)} />
     
+    <!-- Preload LCP hero background image -->
+    <link rel="preload" as="image" href={`${currentBase}images/mtup/10/hero-bg.webp`} fetchpriority="high" />
+
     <!-- Meta tags for Favicons -->
     <link rel="icon" href={`${currentBase}favicon.ico`} />
     <link rel="icon" type="image/png" sizes="16x16" href={`${currentBase}icon16.png`} />
@@ -24,7 +52,16 @@ const SEO_DESCRIPTION = "2026年7月4日(土)開催！フラットユーザー�
     <meta property="og:type" content="website" />
     <meta property="og:title" content={SEO_TITLE} />
     <meta property="og:description" content={SEO_DESCRIPTION} />
-    <meta property="og:image" content={`${Astro.site}${currentBase}images/mtup/10/SelfPoster/full.webp`} />
+    <meta property="og:image" content={new URL(`${currentBase}images/mtup/10/SelfPoster/full.webp`, Astro.site).toString()} />
+    
+    <!-- Twitter Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={SEO_TITLE} />
+    <meta name="twitter:description" content={SEO_DESCRIPTION} />
+    <meta name="twitter:image" content={new URL(`${currentBase}images/mtup/10/SelfPoster/full.webp`, Astro.site).toString()} />
+
+    <!-- JSON-LD Event Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify(eventSchema)} />
     
     <style>
         html, body {

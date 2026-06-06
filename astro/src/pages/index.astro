@@ -30,6 +30,15 @@ const clonesEnd = clothImages.slice(0, 3); // 最初の3枚
 <html lang="ja">
   <head>
     <BaseHead title={`${SITE_TITLE} | VRではじめる、もふもふケモノライフ`} description={SITE_DESCRIPTION} />
+    <script type="application/ld+json" is:inline>
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "フラットファンクラブ",
+        "alternateName": ["Flat Fan Club"],
+        "url": "https://vrcflat.github.io/"
+      }
+    </script>
     <style>
       /* ヒーローセクション */
       .hero {
@@ -644,7 +653,7 @@ const clonesEnd = clothImages.slice(0, 3); // 最初の3枚
     <!-- 1. ヒーローセクション -->
     <section class="hero">
       <div class="hero-bg">
-        <img src={`${currentBase}images/FirstViewPC.webp`} alt="VRChat フラットくんの笑顔が集まる背景画像" />
+        <img src={`${currentBase}images/FirstViewPC.webp`} alt="VRChat フラットくんの笑顔が集まる背景画像" loading="eager" fetchpriority="high" />
       </div>
       <div class="hero-content">
         <img src={`${currentBase}images/logo.webp`} alt="フラットファンサイト ロゴ" class="hero-logo" />
@@ -740,12 +749,12 @@ const clonesEnd = clothImages.slice(0, 3); // 最初の3枚
             {clonesStart.map((imgName, index) => {
               const originalIndex = clothImages.length - 3 + index;
               return (
-                <div class="carousel-slide clone-slide" data-index={originalIndex}>
+                <div class="carousel-slide clone-slide" data-index={originalIndex} aria-hidden="true">
                   <div class="carousel-card">
                     <div class="carousel-img-container">
                       <img 
                         src={`${currentBase}images/ClothSample/${imgName}`} 
-                        alt="シームレス無限スライド用のクローン画像" 
+                        alt="" 
                         loading="lazy" 
                       />
                     </div>
@@ -771,12 +780,12 @@ const clonesEnd = clothImages.slice(0, 3); // 最初の3枚
 
             <!-- 【3. 終了側の無限連結用クローン（最初の3枚）】 -->
             {clonesEnd.map((imgName, index) => (
-              <div class="carousel-slide clone-slide" data-index={index}>
+              <div class="carousel-slide clone-slide" data-index={index} aria-hidden="true">
                 <div class="carousel-card">
                   <div class="carousel-img-container">
                     <img 
                       src={`${currentBase}images/ClothSample/${imgName}`} 
-                      alt="シームレス無限スライド用のクローン画像" 
+                      alt="" 
                       loading="lazy" 
                     />
                   </div>
