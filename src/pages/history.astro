@@ -5,7 +5,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 const SEO_TITLE = "フラットくんの歩んできた歴史 | フラットファンクラブ";
-const SEO_DESCRIPTION = "アバター「フラット」くんのアップデート履歴から、歴代の定例集会・撮影会の開催記録まで、もふもふアバターの進化の歩みを振り返るタイムライン！";
+const SEO_DESCRIPTION = "アバター「フラット」くんのアップデート履歴から、歴代の集会まで、もふもふアバターの進化の歩みを振り返るタイムライン！";
 
 const currentBase = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 
@@ -13,29 +13,29 @@ const avatarHistory = [
   {
     date: "2026.01.28",
     version: "v4.0",
-    title: "フラット 4th Anniversary 発売！",
-    desc: "フラット4周年を記念したフルリメイクモデルが発売されました。近未来風サイバーネオン衣装を初期装備し、PhysBones設定を完全近代化。表情アニメーションやMA（Modular Avatar）との互換性が劇的に強化されました。",
+    title: "フラット 4th Anniversary",
+    desc: "フラット4周年を記念したリメイクモデル！。近未来風サイバー衣装を初期装備し、表情アニメーションが劇的に増えました。",
     image: "Flat4th.webp"
   },
   {
     date: "2025.10.14",
     version: "v3.0",
     title: "フラット If Ver リリース！",
-    desc: "「もしもやんちゃ系だったら？」のパラレルコンセプトアバター。牙を少し出した可愛いワイルドな表情と、ストリートパンクジャケットを初期装備した個性派モデルとして人気を博しました。",
+    desc: "「もしもフラットくんがやんちゃだったら？」のパラレルコンセプトアバター。牙を少し出した可愛いワイルドな表情や、ストリートなジャケットを初期装備した個性派モデルとして人気を博しました。",
     image: "FlatIF.webp"
   },
   {
     date: "2024.05.27",
     version: "v2.0",
     title: "フラット 2nd Anniversary リリース！",
-    desc: "2周年記念モデル。現在でも人気の高いカジュアル専用パーカー衣装を搭載。Unity 2019への対応やアバター動作設定が一部軽量化・洗練されました。",
+    desc: "2周年記念モデル。現在でも人気の高いカジュアルパーカー衣装を搭載。耳が動くようになりました。",
     image: "Flat2nd.webp"
   },
   {
     date: "2022.01.06",
     version: "v1.0",
     title: "初代「フラット」販売開始！",
-    desc: "らすちんワークスより、VRChat向けオリジナルケモノアバター「フラット」が誕生。着ぐるみ体型という独自の親しみやすさと、驚異的な愛らしさでケモナーコミュニティで瞬く間に話題となりました。",
+    desc: "らすちんワークスより、VRChat向けオリジナルケモノアバター「フラット」が誕生。着ぐるみ体型という独自の親しみやすさと、驚異的な愛らしさで瞬く間に話題となりました。",
     image: "FlatNormal.webp"
   }
 ];
@@ -405,7 +405,7 @@ const meetingHistory = [
     <main class="history-container">
       
       <!-- アバター開発の歩み -->
-      <h2 class="history-section-title">アバター開発・アップデートログ ⚙️</h2>
+      <h2 class="history-section-title">フラットくんの歴史</h2>
       
       <div class="timeline">
         {avatarHistory.map((item) => (
@@ -439,7 +439,7 @@ const meetingHistory = [
       </div>
 
       <!-- コミュニティイベントの歩み -->
-      <h2 class="history-section-title">歴代の集会 📷</h2>
+      <h2 class="history-section-title">歴代の集会</h2>
 
       <div class="poster-grid">
         {meetingHistory.map((meeting) => {
