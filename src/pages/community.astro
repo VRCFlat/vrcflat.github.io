@@ -356,11 +356,13 @@ const regularEvents = [
 
       /* Event card gallery */
       .event-card .timeline-gallery {
-        flex: 1;
-        min-width: 0;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
+      }
+
+      .event-card .timeline-gallery .gallery-img-wrapper {
+        aspect-ratio: 16 / 10;
       }
 
       .gallery-img-wrapper {
@@ -433,9 +435,8 @@ const regularEvents = [
         padding: 2.5rem;
         box-shadow: var(--shadow-glass);
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         gap: 2rem;
-        align-items: center;
         transition: var(--transition-smooth);
       }
 
@@ -639,8 +640,8 @@ const regularEvents = [
           gap: 3rem;
         }
 
-        .event-card {
-          flex-direction: column;
+        .event-card .timeline-gallery {
+          grid-template-columns: 1fr;
         }
 
         .timeline::before {
