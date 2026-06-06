@@ -6,17 +6,17 @@ const currentBase = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BAS
 
 <footer class="footer">
   <div class="footer-container">
-    <div class="footer-brand">
-      <a href={`${currentBase}`} class="footer-logo-link">
-        <img src={`${currentBase}images/logo.webp`} alt="フラットファンクラブ ロゴ" class="footer-logo" />
-      </a>
-      <p class="footer-desc">
-        VRChat向け3Dケモノアバター「フラット」くんの魅力を伝える、非公式のファンサイトです。
-      </p>
-    </div>
-    
-    <div class="footer-links-grid">
-      <div class="footer-group">
+    <div class="footer-wrapper">
+      <div class="footer-card footer-brand">
+        <a href={`${currentBase}`} class="footer-logo-link">
+          <img src={`${currentBase}images/logo.webp`} alt="フラットファンクラブ ロゴ" class="footer-logo" />
+        </a>
+        <p class="footer-desc">
+          VRChat向け3Dケモノアバター「フラット」くんの魅力を伝える、非公式のファンサイトです。
+        </p>
+      </div>
+      
+      <div class="footer-card footer-group">
         <h4>サイトリンク</h4>
         <ul>
           <li><a href={currentBase}>ホーム</a></li>
@@ -27,7 +27,7 @@ const currentBase = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BAS
         </ul>
       </div>
 
-      <div class="footer-group">
+      <div class="footer-card footer-group">
         <h4>公式リンク</h4>
         <ul>
           <li><a href="https://booth.pm/ja/search/%E3%83%95%E3%83%A9%E3%83%83%E3%83%88" target="_blank" rel="noopener noreferrer">Booth検索（フラット）</a></li>
@@ -64,17 +64,29 @@ const currentBase = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BAS
   .footer-container {
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 3rem;
     padding-bottom: 3rem;
     border-bottom: 1px solid rgba(244, 173, 57, 0.15);
   }
 
-  .footer-links-grid {
+  .footer-wrapper {
     display: grid;
-    grid-template-columns: repeat(2, minmax(200px, auto));
-    gap: 2rem;
+    grid-template-columns: max-content max-content max-content;
+    justify-content: center;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  .footer-card {
+    min-width: 0;
+  }
+
+  .footer-brand {
+    width: 320px;
+    text-align: left;
+  }
+
+  .footer-brand .footer-logo-link {
+    justify-content: center;
   }
 
   .footer-logo-link {
@@ -173,18 +185,20 @@ const currentBase = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BAS
   }
 
   @media (max-width: 768px) {
-    .footer-container {
+    .footer-wrapper {
       grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-    
-    .footer-links-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+      gap: 2.5rem;
     }
     
     .footer-brand {
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
       text-align: center;
+    }
+
+    .footer-brand .footer-logo-link {
+      justify-content: center;
     }
 
     .footer-logo-link {
