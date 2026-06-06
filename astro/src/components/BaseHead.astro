@@ -27,6 +27,16 @@ const imageSrc = typeof image === 'string'
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VNVFWMWXMC" is:inline></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VNVFWMWXMC');
+</script>
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" href={`${base}favicon.ico`} />
 <link rel="icon" type="image/png" sizes="16x16" href={`${base}icon16.png`} />
