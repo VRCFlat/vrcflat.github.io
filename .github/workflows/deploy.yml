@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ "master" ] # masterブランチにpushされたら動く
+    branches: [ "main" ] # mainブランチにpushされたら動く
   workflow_dispatch: # 手動実行もできるようにする
 
 permissions:
@@ -23,6 +23,8 @@ jobs:
     steps:
       - name: Checkout your repository
         uses: actions/checkout@v4
+        with:
+          submodules: false # tool submodule is not needed for Astro build
 
       - name: Install, shadowload, and Build
         uses: withastro/action@v3
