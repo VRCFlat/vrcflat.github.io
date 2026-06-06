@@ -553,10 +553,93 @@ const clonesEnd = clothImages.slice(0, 3); // 最初の3枚
           display: none; /* タブレット以下はスワイプ対応のため非表示 */
         }
       }
+
+      /* 特設告知バナー */
+      .announcement-banner {
+        background: linear-gradient(90deg, hsl(37, 90%, 59%) 0%, hsl(6, 78%, 58%) 100%);
+        color: var(--color-text-white);
+        padding: 10px 1.5rem;
+        text-align: center;
+        font-weight: 700;
+        font-size: 0.95rem;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        position: relative;
+        z-index: 5;
+      }
+
+      .announcement-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .announcement-tag {
+        background: rgba(255, 255, 255, 0.25);
+        padding: 2px 10px;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.05em;
+      }
+
+      .announcement-link {
+        color: var(--color-text-white);
+        text-decoration: underline;
+        font-weight: 800;
+        transition: var(--transition-fast);
+      }
+
+      .announcement-link:hover {
+        opacity: 0.8;
+      }
+
+      /* 第10回集会特設ボタンの強調スタイル */
+      .btn-mtup10 {
+        background: linear-gradient(135deg, #00d2ff 0%, #0072ff 100%) !important;
+        color: var(--color-text-white) !important;
+        font-size: 1.15rem !important; /* Larger font size */
+        padding: 14px 36px !important;  /* Larger padding */
+        border-radius: 50px !important;
+        box-shadow: 0 8px 25px rgba(0, 114, 255, 0.45), 0 0 0 0 rgba(0, 210, 255, 0.75);
+        animation: pulseGlowBlue 2.2s infinite;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn-mtup10:hover {
+        transform: translateY(-4px) scale(1.05) !important;
+        box-shadow: 0 12px 35px rgba(0, 114, 255, 0.65) !important;
+        animation: none;
+      }
+
+      @keyframes pulseGlowBlue {
+        0% {
+          box-shadow: 0 8px 25px rgba(0, 114, 255, 0.45), 0 0 0 0 rgba(0, 210, 255, 0.75);
+        }
+        70% {
+          box-shadow: 0 8px 25px rgba(0, 114, 255, 0.45), 0 0 0 14px rgba(0, 210, 255, 0);
+        }
+        100% {
+          box-shadow: 0 8px 25px rgba(0, 114, 255, 0.45), 0 0 0 0 rgba(0, 210, 255, 0);
+        }
+      }
     </style>
   </head>
   <body>
     <Header />
+
+    <!-- 特設告知バナー -->
+    <div class="announcement-banner">
+      <div class="announcement-content">
+        <span class="announcement-tag">EVENT</span>
+        <span>2026年7月4日(土) 22:00〜 「第10回フラット集会」開催！</span>
+        <a href={`${currentBase}mtup/10`} class="announcement-link">特設ページはこちら ➔</a>
+      </div>
+    </div>
 
     <!-- 1. ヒーローセクション -->
     <section class="hero">
@@ -569,6 +652,7 @@ const clonesEnd = clothImages.slice(0, 3); // 最初の3枚
         <p>VRChat向け着ぐるみ体型ケモノアバター「フラット」くんの<wbr>非公式ファンサイトへようこそ！<wbr>アバターの魅力から、<wbr>初心者向けアップロード、<wbr>着替えの方法まで徹底ガイドします。</p>
         <div class="hero-actions">
           <a href={`${currentBase}guide/`} class="btn btn-primary btn-lg">入門ガイドを見る 🐾</a>
+          <a href={`${currentBase}mtup/10`} class="btn btn-accent btn-lg btn-mtup10">第10回集会 特設ページ ➔</a>
           <a href="#gallery" class="btn btn-secondary btn-lg">コーディネートを見る</a>
         </div>
       </div>

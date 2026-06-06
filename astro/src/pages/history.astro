@@ -442,26 +442,41 @@ const meetingHistory = [
       <h2 class="history-section-title">歴代の集会 📷</h2>
 
       <div class="poster-grid">
-        {meetingHistory.map((meeting) => (
-          <article class="poster-card">
-            <div class="poster-image-wrapper">
-              <img
-                src={`${currentBase}images/history/${meeting.image}`}
-                alt={`第${meeting.num}回 フラット集会 ポスター`}
-                class="poster-image"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <div class="poster-info">
-              <span class="poster-badge">MEETUP #{meeting.num}</span>
-              <h3 class="poster-title">第{meeting.num}回 フラット集会</h3>
-              <time datetime={meeting.rawDate} class="poster-date">
-                📅 {meeting.date}
-              </time>
-            </div>
-          </article>
-        ))}
+        {meetingHistory.map((meeting) => {
+          const CardContent = (
+            <article class="poster-card" style={meeting.num === 10 ? "cursor: pointer;" : ""}>
+              <div class="poster-image-wrapper">
+                <img
+                  src={`${currentBase}images/history/${meeting.image}`}
+                  alt={`第${meeting.num}回 フラット集会 ポスター`}
+                  class="poster-image"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="poster-info">
+                <span class="poster-badge">MEETUP #{meeting.num}</span>
+                <h3 class="poster-title">第{meeting.num}回 フラット集会</h3>
+                <time datetime={meeting.rawDate} class="poster-date">
+                  📅 {meeting.date}
+                </time>
+                {meeting.num === 10 && (
+                  <span style="color: var(--color-accent); font-size: 0.85rem; font-weight: 800; margin-top: 6px; display: inline-flex; align-items: center; gap: 4px;">
+                    特設ページはこちら ➔
+                  </span>
+                )}
+              </div>
+            </article>
+          );
+
+          return meeting.num === 10 ? (
+            <a href={`${currentBase}mtup/10`} class="poster-card-link" style="text-decoration: none; color: inherit; display: block;">
+              {CardContent}
+            </a>
+          ) : (
+            CardContent
+          );
+        })}
       </div>
 
     </main>
