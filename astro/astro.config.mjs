@@ -17,12 +17,15 @@ export default defineConfig({
 			hooks: {
 				'astro:build:done': async ({ dir }) => {
 					try {
+						const sitemap0Path = new URL('sitemap-0.xml', dir);
 						const sitemapIndexPath = new URL('sitemap-index.xml', dir);
 						const sitemapPath = new URL('sitemap.xml', dir);
-						await fs.copyFile(sitemapIndexPath, sitemapPath);
-						console.log('Successfully copied sitemap-index.xml to sitemap.xml');
+						await fs.copyFile(sitemap0Path, sitemapPath);
+						await fs.unlink(sitemap0Path);
+						await fs.unlink(sitemapIndexPath);
+						console.log('Successfully generated a flat sitemap.xml and cleaned up sitemap-index.xml and sitemap-0.xml');
 					} catch (err) {
-						console.error('Failed to copy sitemap-index.xml to sitemap.xml:', err);
+						console.error('Failed to post-process sitemap:', err);
 					}
 				}
 			}
