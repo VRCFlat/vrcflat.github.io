@@ -29,7 +29,7 @@ jobs:
       - name: Install, shadowload, and Build
         uses: withastro/action@v3
         with:
-          path: "./astro" # ← ここで「Astroはサブフォルダにあるよ」と教えています
+          path: "." # ← Astroはルートフォルダにあります
           node-version: 22 # Astro v6 用 Node.js 22 以上が必要
 
   deploy:

@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://vrcflat.github.io/sitemap.xml
