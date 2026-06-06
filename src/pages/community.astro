@@ -7,7 +7,7 @@ import Footer from '../components/Footer.astro';
 const currentBase = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 
 const SEO_TITLE = "フラットくんの温かいコミュニティ | フラットファンクラブ";
-const SEO_DESCRIPTION = "アバター「フラット」くんのオーナーたちが集まる、愛にあふれたコミュニティの紹介。年1回100名以上が集まる大集会や、日々の交流情報をお届け！";
+const SEO_DESCRIPTION = "津々浦々のフラットたちが集まる、愛にあふれたコミュニティの紹介。年1回100名以上が集まる大集会や、日々の交流情報をお届け！";
 
 const meetups = [
   {
@@ -16,10 +16,7 @@ const meetups = [
     title: "第9回 フラット集会",
     desc: "リニューアルモデル（4周年記念版など）がお披露目され、歴代最高に表現力豊かでカラフルなフラットくんたちが一堂に会しました。衣装のバリエーションもさらに広がり、笑顔に満ちた素晴らしい思い出の写真となりました。",
     images: ["meetup_9-1.webp", "meetup_9-2.webp"],
-    captions: [
-      "黄色の波！可愛さが限界突破した第9回フラット集会の記念撮影写真です。",
-      "色とりどりの個性豊かな衣装を着こなす、おしゃれなフラットくんたち。"
-    ]
+    images: ["meetup_9-1.webp", "meetup_9-2.webp"],
   },
   {
     num: 8,
@@ -27,10 +24,6 @@ const meetups = [
     title: "第8回 フラット集会",
     desc: "パラレルコンセプトアバター「If Ver」などの参加もあり、多様な表情とスタイルが光った第8回。それぞれのオーナーがこだわり抜いた表情やポージングで、賑やかで息の合った並びとなりました。",
     images: ["meetup_8-1.webp", "meetup_8-2.webp"],
-    captions: [
-      "ぎゅっと集まってハイ、ポーズ！もふもふの温もりが伝わる1枚です。",
-      "アバターの魅力をそれぞれ引き出したポーズで並びました。"
-    ]
   },
   {
     num: 7,
@@ -38,10 +31,6 @@ const meetups = [
     title: "第7回 フラット集会",
     desc: "夏のはじまりを告げる第7回集会。多くの新しいオーナー様も加わり、初めての参加でも温かく包み込むコミュニティの優しさがあふれるイベントとなりました。サンプルアバターでの参加者も多数いました。",
     images: ["meetup_7-1.webp", "meetup_7-2.webp"],
-    captions: [
-      "大人数でもぴったり整列！みんなのフラット愛が一つになった瞬間です。",
-      "初めての参加者もすぐに馴染める、終始なごやかな雰囲気でした。"
-    ]
   },
   {
     num: 6,
@@ -49,10 +38,6 @@ const meetups = [
     title: "第6回 フラット集会",
     desc: "暑さを吹き飛ばすような元気いっぱいのフラットたちが大集結！PhysBones等のギミックでお互いのもふもふ感を確かめ合ったり、仕草を真似し合ったりと、VRChatならではの一体感が生まれました。",
     images: ["meetup_6-1.webp", "meetup_6-2.webp"],
-    captions: [
-      "ワールドのステージいっぱいに広がる、幸せいっぱいのフラットくんたち。",
-      "手をつないだり、ポーズを合わせたりして楽しむオーナーたち。"
-    ]
   },
   {
     num: 5,
@@ -60,9 +45,6 @@ const meetups = [
     title: "第5回 フラット集会",
     desc: "新年の幕開けとともに開催された、節目の第5回集会。コミュニティの規模も順調に拡大し、イベント自体の進行も洗練され、お互いの衣装やカスタムの自慢大会も非常に盛り上がりました。",
     images: ["meetup_5.webp"],
-    captions: [
-      "新年を祝う、笑顔あふれる第5回フラット集会の記念撮影。"
-    ]
   },
   {
     num: 4,
@@ -70,10 +52,6 @@ const meetups = [
     title: "第4回 フラット集会",
     desc: "秋の夜長に開催された第4回。アバター向けの対応衣装やアクセサリーがBOOTHなどで多数発表され始め、初期衣装だけでなく自分だけのコーディネートでオシャレに着飾ったフラットくんたちが増えていきました。",
     images: ["meetup_4-1.webp", "meetup_4-2.webp"],
-    captions: [
-      "それぞれの「うちの子」の個性が光る、コーディネート豊かな記念写真。",
-      "カメラ目線でばっちり！仲の良さがうかがえます。"
-    ]
   },
   {
     num: 3,
@@ -81,10 +59,6 @@ const meetups = [
     title: "第3回 フラット集会",
     desc: "春の暖かさに包まれた第3回。少しずつ定例の集まりとしての認知度も高まり、「フラットくんを使っているフレンドに会いたい！」という理由で新しくアバターを購入して参加してくれる方も増え始めました。",
     images: ["meetup_3-1.webp", "meetup_3-2.webp"],
-    captions: [
-      "春の陽気のようにぽかぽか温かい、みんなの仲良し集合写真。",
-      "アバターの可愛いギミックを動かして、みんなでわいわい！"
-    ]
   },
   {
     num: 2,
@@ -92,10 +66,6 @@ const meetups = [
     title: "第2回 フラット集会",
     desc: "発売から1ヶ月を経て開催された第2回集会。初代リリースの興奮が冷めやらぬ中、VRChat上のケモノコミュニティ内で「めちゃくちゃ可愛いアバターがある！」と広まり、参加人数が前回の倍以上に膨らみました。",
     images: ["meetup_2-1.webp", "meetup_2-2.webp"],
-    captions: [
-      "アバター発売から早くも賑わいを見せる、大満足の第2回記念撮影。",
-      "黄色くて丸いフォルムの魅力がたっぷり詰まったスクショです。"
-    ]
   },
   {
     num: 1,
@@ -103,9 +73,6 @@ const meetups = [
     title: "第1回 フラット集会",
     desc: "アバター「フラット」くんの販売開始（1月6日）からわずか2日後に行われた、伝説 of 伝説の第1回集会。まだ限られたオーナー数でしたが、この小さなもふもふの輪が、現在の100名を超える大コミュニティの第一歩となりました。",
     images: ["meetup_1.webp"],
-    captions: [
-      "ここからすべてが始まった！記念すべき第1回目のアットホームな集合写真。"
-    ]
   }
 ];
 
@@ -115,19 +82,12 @@ const regularEvents = [
     badge: "第1・第3火曜日 22:00〜",
     desc: "フラット集会協賛イベントであり、アットホームな和風の雰囲気のなかでお喋りを楽しむカフェ。フラットくんオーナーやファンたちがのんびりと集まり、日頃の出来事を語り合っています。見学アバターでの来店や、VRChat初心者の方へのサポートも丁寧に行われています。",
     images: ["hidamari_hidamari1.webp", "hidamari_hidamari2.webp"],
-    captions: [
-      "ひだまりの穏やかな和風空間で、お座敷を囲んでくつろぐフラットくんたち。",
-      "店内でまったり。誰でも優しく迎え入れる温かい雰囲気が魅力です。"
-    ]
   },
   {
     title: "KemonoBar ずんどこ",
     badge: "毎週金曜日 22:00〜",
     desc: "フラット族の「コモドくん」がマスターを務める、ケモノたちのための金曜夜のバー。毎週多くのケモノ系アバターユーザーで大盛況となり、フラットくんたちのたまり場としても親しまれています。陽気で楽しいお喋りと、音楽やトークでにぎやかに週末の夜を過ごしたい方に最高の場所です。",
     images: ["zundoko.webp"],
-    captions: [
-      "毎週大盛況！マスターのコモドくんを中心に、笑顔と会話が溢れるずんどこの夜。"
-    ]
   }
 ];
 ---
@@ -580,18 +540,6 @@ const regularEvents = [
         transform: scale(1);
       }
 
-      .lightbox-caption {
-        color: var(--color-text-white);
-        margin-top: 1.5rem;
-        font-size: 1.1rem;
-        font-weight: 700;
-        text-align: center;
-        max-width: 800px;
-        line-height: 1.6;
-        text-shadow: 0 2px 8px rgba(0,0,0,0.8);
-        transition: opacity 0.2s ease;
-      }
-
       .lightbox-btn {
         position: absolute;
         background: rgba(255, 255, 255, 0.1);
@@ -710,7 +658,7 @@ const regularEvents = [
     <!-- Page Hero -->
     <header class="page-hero">
       <h1>もふもふコミュニティ</h1>
-      <p>フラットくんオーナーたちが紡ぎ出す、フレンドリーで親切な世界。<br/>初心者も大歓迎される、温かいふれあいの輪をご紹介します。</p>
+      <p>フラットくんたちが紡ぎ出す、フレンドリーな世界。<br/>初心者も大歓迎の、温かいふれあいの輪を紹介します。</p>
     </header>
 
     <main>
@@ -722,7 +670,7 @@ const regularEvents = [
             オリジナルケモノアバター「フラット」には、非常にフレンドリーで活発なプレイヤーコミュニティが存在します。VRChatを始めたばかりで友達を見つけたい方や、同じアバターを持つ仲間とのんびり雑談を楽しみたい方にぴったりの居場所です。
           </p>
           <p>
-            年に一度の定例集会では100名を超えるオーナーたちが大集合するほか、隔週開催の和風喫茶や、毎週金曜日のバーイベントなど、日常的に集まれる憩いのイベントが随時開催されています。
+            年に一度の定例集会では100名を超えるフラットくんたちが大集合するほか、隔週開催の和風喫茶や、毎週金曜日のバーイベントなど、日常的に集まれる憩いのイベントが随時開催されています。
           </p>
         </div>
 
@@ -767,10 +715,9 @@ const regularEvents = [
                 
                 <div class={`timeline-gallery cols-${meetup.images.length}`}>
                   {meetup.images.map((img, index) => (
-                    <div 
-                      class="gallery-img-wrapper gallery-img" 
+                    <div
+                      class="gallery-img-wrapper gallery-img"
                       data-src={`${currentBase}images/community/${img}`}
-                      data-caption={`${meetup.title} — ${meetup.captions[index]}`}
                     >
                       <img 
                         src={`${currentBase}images/community/${img}`} 
@@ -808,10 +755,9 @@ const regularEvents = [
                 
                 <div class={`timeline-gallery cols-${event.images.length}`} style="margin-top: 1.5rem;">
                   {event.images.map((img, index) => (
-                    <div 
-                      class="gallery-img-wrapper gallery-img" 
+                    <div
+                      class="gallery-img-wrapper gallery-img"
                       data-src={`${currentBase}images/community/${img}`}
-                      data-caption={`${event.title} — ${event.captions[index]}`}
                     >
                       <img 
                         src={`${currentBase}images/community/${img}`} 
@@ -832,9 +778,9 @@ const regularEvents = [
 
       <!-- VRChat Group CTA -->
       <section class="cta-box">
-        <h3>フラットオーナーズクラブに参加しよう！</h3>
+        <h3>フラット グループに参加しよう！</h3>
         <p>
-          VRChat公式グループ「Flat Owner's Club」に参加すると、突発的な集会、撮影会、定期イベントの開催告知などの情報を受け取ることができます。見学枠もありますので、まだアバターを購入していないファンの方もお気軽にご参加ください！
+          VRChat公式グループ「フラット」に参加すると、突発的な集会、撮影会、定期イベントの開催告知などの情報を受け取ることができます。見学枠もありますので、まだアバターを購入していないファンの方もお気軽にご参加ください！
         </p>
         <a href="https://vrchat.com/home/group/grp_f15bceb1-874a-4458-a494-56ece83d0683" target="_blank" rel="noopener noreferrer" class="btn btn-accent btn-lg">
           VRChatグループページを開く 🐾
@@ -848,8 +794,7 @@ const regularEvents = [
       <button class="lightbox-btn lightbox-prev" id="lightbox-prev" aria-label="前の画像">◀</button>
       
       <div class="lightbox-wrapper">
-        <img id="lightbox-img" class="lightbox-img" src="" alt="拡大画像" />
-        <p id="lightbox-caption" class="lightbox-caption"></p>
+       <img id="lightbox-img" class="lightbox-img" src="" alt="拡大画像" />
       </div>
 
       <button class="lightbox-btn lightbox-next" id="lightbox-next" aria-label="次の画像">▶</button>
@@ -858,19 +803,18 @@ const regularEvents = [
     <!-- Lightbox Client Script -->
     <script>
       // Wait for DOM to load
-      document.addEventListener('DOMContentLoaded', () => {
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        const lightboxCaption = document.getElementById('lightbox-caption');
-        const closeBtn = document.getElementById('lightbox-close');
-        const prevBtn = document.getElementById('lightbox-prev');
-        const nextBtn = document.getElementById('lightbox-next');
-        
-        // Find all clickable gallery items
-        const galleryItems = Array.from(document.querySelectorAll('.gallery-img'));
-        let currentIndex = -1;
+     document.addEventListener('DOMContentLoaded', () => {
+       const lightbox = document.getElementById('lightbox');
+       const lightboxImg = document.getElementById('lightbox-img');
+       const closeBtn = document.getElementById('lightbox-close');
+       const prevBtn = document.getElementById('lightbox-prev');
+       const nextBtn = document.getElementById('lightbox-next');
+       
+       // Find all clickable gallery items
+       const galleryItems = Array.from(document.querySelectorAll('.gallery-img'));
+       let currentIndex = -1;
 
-        if (!lightbox || !lightboxImg || !lightboxCaption || !closeBtn || !prevBtn || !nextBtn) return;
+       if (!lightbox || !lightboxImg || !closeBtn || !prevBtn || !nextBtn) return;
 
         // Show image in lightbox
         function showImage(index) {
@@ -879,22 +823,8 @@ const regularEvents = [
           
           const item = galleryItems[index];
           const src = item.getAttribute('data-src') || '';
-          const caption = item.getAttribute('data-caption') || '';
           
-          // Smooth crossfade using opacity transition
-          lightboxImg.style.opacity = '0';
-          lightboxCaption.style.opacity = '0';
-          
-          setTimeout(() => {
-            lightboxImg.src = src;
-            lightboxCaption.textContent = caption;
-            
-            // Wait for image to load before fading back in
-            lightboxImg.onload = () => {
-              lightboxImg.style.opacity = '1';
-              lightboxCaption.style.opacity = '1';
-            };
-          }, 150);
+          lightboxImg.src = src;
         }
 
         // Open Lightbox
