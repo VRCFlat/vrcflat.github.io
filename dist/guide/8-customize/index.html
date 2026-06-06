@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-y3ba2w7m> <head><!-- Global Metadata --><meta charset="utf-8"><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-VNVFWMWXMC"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VNVFWMWXMC');
+</script><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="icon" type="image/png" sizes="16x16" href="/icon16.png"><link rel="icon" type="image/png" sizes="48x48" href="/icon48.png"><link rel="icon" type="image/png" sizes="128x128" href="/icon128.png"><link rel="apple-touch-icon" href="/icon128.png"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="フラットファンクラブ" href="/rss.xml"><meta name="generator" content="Astro v6.4.2"><!-- Canonical URL --><link rel="canonical" href="https://vrcflat.github.io/guide/8-customize/"><!-- Primary Meta Tags --><title>【VRChat】アバターのテクスチャ改変のやり方！自分色に色変えする方法 | フラットファンクラブ</title><meta name="title" content="【VRChat】アバターのテクスチャ改変のやり方！自分色に色変えする方法 | フラットファンクラブ"><meta name="description" content="「アバターの毛並みや瞳の色を、自分の好きな色に変えてみたい！」ペイントソフトやUnityの機能を使った、初心者向けアバターカラー改変のロードマップ。"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://vrcflat.github.io/guide/8-customize/"><meta property="og:title" content="【VRChat】アバターのテクスチャ改変のやり方！自分色に色変えする方法 | フラットファンクラブ"><meta property="og:description" content="「アバターの毛並みや瞳の色を、自分の好きな色に変えてみたい！」ペイントソフトやUnityの機能を使った、初心者向けアバターカラー改変のロードマップ。"><meta property="og:image" content="https://vrcflat.github.io/_astro/ogp.BN_HifPl.webp"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://vrcflat.github.io/guide/8-customize/"><meta property="twitter:title" content="【VRChat】アバターのテクスチャ改変のやり方！自分色に色変えする方法 | フラットファンクラブ"><meta property="twitter:description" content="「アバターの毛並みや瞳の色を、自分の好きな色に変えてみたい！」ペイントソフトやUnityの機能を使った、初心者向けアバターカラー改変のロードマップ。"><meta property="twitter:image" content="https://vrcflat.github.io/_astro/ogp.BN_HifPl.webp"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://vrcflat.github.io/"},{"@type":"ListItem","position":2,"name":"入門ガイド","item":"https://vrcflat.github.io/guide/"},{"@type":"ListItem","position":3,"name":"STEP 8: テクスチャを改変して自分だけのカラーにする","item":"https://vrcflat.github.io/guide/8-customize/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"【VRChat】アバターのテクスチャ改変のやり方！自分色に色変えする方法","description":"「アバターの毛並みや瞳の色を、自分の好きな色に変えてみたい！」ペイントソフトやUnityの機能を使った、初心者向けアバターカラー改変のロードマップ。","url":"https://vrcflat.github.io/guide/8-customize/","inLanguage":"ja","author":{"@type":"Organization","name":"フラットファンクラブ"},"publisher":{"@type":"Organization","name":"フラットファンクラブ"}}</script><link rel="stylesheet" href="/_astro/Footer.CQaNj7Xt.css">
+<style>.guide-layout[data-astro-cid-y3ba2w7m]{max-width:900px;margin:2rem auto;padding:0 1.5rem}.breadcrumbs[data-astro-cid-y3ba2w7m]{display:flex;gap:8px;align-items:center;font-size:.85rem;color:var(--color-text-muted);margin-bottom:2rem}.breadcrumbs[data-astro-cid-y3ba2w7m] a[data-astro-cid-y3ba2w7m]{color:var(--color-brand-dark);text-decoration:none;font-weight:700;transition:var(--transition-fast)}.breadcrumbs[data-astro-cid-y3ba2w7m] a[data-astro-cid-y3ba2w7m]:hover{color:var(--color-accent)}.step-hero[data-astro-cid-y3ba2w7m]{background:linear-gradient(135deg,#fbc774,#d47311);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:2.5rem;margin-bottom:3rem;box-shadow:var(--shadow-glass);position:relative;overflow:hidden}.step-hero[data-astro-cid-y3ba2w7m] h1[data-astro-cid-y3ba2w7m]{color:var(--color-text-white);text-shadow:0 4px 10px rgba(0,0,0,.1)}.step-hero-desc[data-astro-cid-y3ba2w7m]{color:#ffffffe6;text-shadow:0 2px 8px rgba(0,0,0,.08)}.step-indicator[data-astro-cid-y3ba2w7m]{background-color:#ffffff40;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3)}.step-hero-number[data-astro-cid-y3ba2w7m]{font-family:Fredoka,sans-serif;font-size:5rem;font-weight:900;color:#f4ad391f;position:absolute;top:-10px;right:20px;line-height:1;pointer-events:none}.step-indicator[data-astro-cid-y3ba2w7m]{display:inline-block;background-color:#ffffff40;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);color:var(--color-text-white);font-weight:800;font-size:.75rem;padding:4px 12px;border-radius:20px;margin-bottom:1rem;letter-spacing:.05em;text-transform:uppercase;font-family:Fredoka,sans-serif}.step-hero[data-astro-cid-y3ba2w7m] h1[data-astro-cid-y3ba2w7m]{font-size:clamp(1.6rem,3.5vw,2.2rem);color:var(--color-text-white);margin-bottom:1rem;line-height:1.3;text-shadow:0 4px 10px rgba(0,0,0,.1)}.step-hero-desc[data-astro-cid-y3ba2w7m]{color:#ffffffe6;font-size:1.05rem;line-height:1.6;text-shadow:0 2px 8px rgba(0,0,0,.08)}.step-meta[data-astro-cid-y3ba2w7m]{display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem;line-height:1.2}.keyword-tag[data-astro-cid-y3ba2w7m]{color:#ffffffbf;font-size:.75rem;text-shadow:0 1px 3px rgba(0,0,0,.05);transition:var(--transition-fast)}.keyword-tag[data-astro-cid-y3ba2w7m]:hover{color:#fff}.keyword-tag[data-astro-cid-y3ba2w7m]:not(:last-child):after{content:"•";margin-left:6px;color:#ffffff73}.guide-content-wrapper[data-astro-cid-y3ba2w7m]{background-color:var(--color-bg);padding:1rem 0}.guide-pagination[data-astro-cid-y3ba2w7m]{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:5rem;padding-top:2rem;border-top:2px dashed var(--color-border)}.pg-btn[data-astro-cid-y3ba2w7m]{background:var(--color-bg-glass);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:1.25rem;display:flex;flex-direction:column;text-decoration:none;transition:var(--transition-smooth);box-shadow:var(--shadow-glass)}.pg-btn[data-astro-cid-y3ba2w7m]:hover{border-color:var(--color-brand);background:var(--color-bg-secondary);transform:translateY(-2px)}.pg-btn-label[data-astro-cid-y3ba2w7m]{font-size:.75rem;font-weight:700;color:var(--color-brand-dark);margin-bottom:4px;text-transform:uppercase}.pg-btn-title[data-astro-cid-y3ba2w7m]{font-size:.95rem;font-weight:800;color:var(--color-text);line-height:1.4}.pg-btn-prev[data-astro-cid-y3ba2w7m]{text-align:left;align-items:flex-start}.pg-btn-next[data-astro-cid-y3ba2w7m]{text-align:right;align-items:flex-end;border-color:#f4ad394d;background:linear-gradient(135deg,#fdfbf7e6,#f4ad390d)}.pg-btn-next[data-astro-cid-y3ba2w7m]:hover{border-color:var(--color-accent)}.pg-btn-next[data-astro-cid-y3ba2w7m] .pg-btn-label[data-astro-cid-y3ba2w7m]{color:var(--color-accent)}@media(max-width:600px){.guide-pagination[data-astro-cid-y3ba2w7m]{grid-template-columns:1fr;gap:1rem}.step-hero[data-astro-cid-y3ba2w7m]{padding:1.5rem}}
+</style></head> <body data-astro-cid-y3ba2w7m> <header class="header" data-astro-cid-3ef6ksr2> <nav class="nav-container" data-astro-cid-3ef6ksr2> <div class="nav-brand" data-astro-cid-3ef6ksr2> <a href="/" class="brand-link brand-font" data-astro-cid-3ef6ksr2> <span class="brand-icon" data-astro-cid-3ef6ksr2>🐾</span> フラットファンクラブ </a> </div> <!-- Desktop Navigation --> <div class="nav-links desktop-only" data-astro-cid-3ef6ksr2> <a href="/" class="nav-item" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> ホーム </a> <a href="/guide/" class="nav-item" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> 入門ガイド </a> <a href="/community/" class="nav-item" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> コミュニティ </a> <a href="/items/" class="nav-item" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> アイテム </a> <a href="/history/" class="nav-item" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> 歴史 </a> </div> <!-- Mobile Menu Button --> <button class="mobile-menu-toggle mobile-only" aria-label="メニューを開閉する" id="menuToggle" data-astro-cid-3ef6ksr2> <span class="bar" data-astro-cid-3ef6ksr2></span> <span class="bar" data-astro-cid-3ef6ksr2></span> <span class="bar" data-astro-cid-3ef6ksr2></span> </button> </nav> <!-- Mobile Dropdown Navigation --> <div class="mobile-menu mobile-only" id="mobileMenu" data-astro-cid-3ef6ksr2> <div class="mobile-menu-inner" data-astro-cid-3ef6ksr2> <a href="/" class="mobile-nav-item" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> ホーム </a> <a href="/guide/" class="mobile-nav-item" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> 入門ガイド </a> <a href="/community/" class="mobile-nav-item" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> コミュニティ </a> <a href="/items/" class="mobile-nav-item" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> アイテム </a> <a href="/history/" class="mobile-nav-item" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> 歴史 </a> </div> </div> </header>  <script type="module">const e=document.getElementById("menuToggle"),t=document.getElementById("mobileMenu");e&&t&&(e.addEventListener("click",()=>{e.classList.toggle("open"),t.classList.toggle("open")}),t.querySelectorAll(".mobile-nav-item").forEach(o=>{o.addEventListener("click",()=>{e.classList.remove("open"),t.classList.remove("open")})}));</script> <div class="guide-layout" data-astro-cid-y3ba2w7m> <!-- Breadcrumbs --> <nav class="breadcrumbs" data-astro-cid-y3ba2w7m> <a href="/" data-astro-cid-y3ba2w7m>ホーム</a> <span data-astro-cid-y3ba2w7m>/</span> <a href="/guide/" data-astro-cid-y3ba2w7m>入門ガイド</a> <span data-astro-cid-y3ba2w7m>/</span> <span style="color: var(--color-text); font-weight: 700;" data-astro-cid-y3ba2w7m>STEP 8</span> </nav> <!-- Step Hero Header --> <header class="step-hero" data-astro-cid-y3ba2w7m> <span class="step-hero-number" data-astro-cid-y3ba2w7m>8</span> <span class="step-indicator" data-astro-cid-y3ba2w7m>STEP 8 / 9</span> <h1 data-astro-cid-y3ba2w7m>テクスチャを改変して自分だけのカラーにする</h1> <p class="step-hero-desc" data-astro-cid-y3ba2w7m>「アバターの毛並みや瞳の色を、自分の好きな色に変えてみたい！」ペイントソフトやUnityの機能を使った、初心者向けアバターカラー改変のロードマップ。</p> <div class="step-meta" data-astro-cid-y3ba2w7m> <span class="keyword-tag" data-astro-cid-y3ba2w7m>#VRC アバター 改変 テクスチャ</span><span class="keyword-tag" data-astro-cid-y3ba2w7m>#VRChat アバター 色変え</span><span class="keyword-tag" data-astro-cid-y3ba2w7m>#アバター 改変 やり方</span> </div> </header> <!-- Main Rendered Markdown --> <main class="guide-content-wrapper" data-astro-cid-y3ba2w7m> <article class="prose" data-astro-cid-y3ba2w7m> <p>アバターをお着替えできるようになったら、最終ステップは <strong>「アバターのカラー改変（テクスチャ改変）」</strong> です！</p>
+<p>フラットくんの毛並みをピンクやブルーのオリジナルカラーに染めたり、瞳の色を自分の好みに変えたり、体にお気に入りのタトゥーやロゴマークを貼り付けたりすることで、この世界に二人といない「あなただけのオリジナルフラットくん」が誕生します。</p>
+<p>このガイドでは、無料の高機能ペイントソフト「GIMP」を使って、初心者でも挑戦できるカスタマイズのやり方をわかりやすく案内します！</p>
+<blockquote>
+<p>[!TIP]
+著者はたまたまGIMPを使用しているため、このガイドではGIMPでの手順を説明しますが、PhotoshopやCLIP STUDIO PAINT（クリスタ）など他のペイントソフトでも基本的な流れは同じです。</p>
+</blockquote>
+<hr>
+<h3 id="step-1-unityのテクスチャフォルダの場所を確認する">Step 1. Unityのテクスチャフォルダの場所を確認する</h3>
+<p>アバターの画像ファイルを編集する準備として、まずはUnityプロジェクト内のテクスチャが保存されているフォルダをエクスプローラーで開きます。</p>
+<ol>
+<li>
+<p>Unityでフラットくんのプロジェクトを開きます。</p>
+</li>
+<li>
+<p>下部の「Project」ウィンドウで <strong><code>tex</code></strong> フォルダを開きます。</p>
+<p><img src="/images/guides/color-change/1.webp" alt="texフォルダを開く"></p>
+</li>
+<li>
+<p>適当なテクスチャ（例：<code>body</code>など）を右クリックし、「<strong>Show in Explorer</strong>」をクリックします。
+<img src="/images/guides/color-change/2.webp" alt="Show in Explorer"></p>
+</li>
+<li>
+<p>エクスプローラーが起動し、テクスチャファイルの保存先が表示されます。エクスプローラーのアドレスバーをクリックして、<strong>フォルダのパス（保存場所）をコピー</strong>しておきます。
+<img src="/images/guides/color-change/3.webp" alt="パスのコピー">
+<img src="/images/guides/color-change/4.webp" alt="エクスプローラーでパスをコピー"></p>
+</li>
+</ol>
+<hr>
+<h3 id="step-2-gimpでpsdファイルを開き作業用ファイルとして保存する">Step 2. GIMPでPSDファイルを開き、作業用ファイルとして保存する</h3>
+<p>次に、ダウンロードしたフラットくんの製品パッケージに含まれる「テクスチャPSDファイル」をGIMPで開いて準備します。</p>
+<ol>
+<li>
+<p>フラットくんをダウンロードして解凍したフォルダを開き、その中にある <strong>「フラットテクスチャファイル」</strong> フォルダを開きます。
+<img src="/images/guides/color-change/5.webp" alt="テクスチャフォルダを開く"></p>
+</li>
+<li>
+<p><strong><code>body.psd</code></strong> をダブルクリック、またはGIMPにドラッグ＆ドロップして開きます。
+<img src="/images/guides/color-change/6.webp" alt="GIMPでbody.psdを開く"></p>
+</li>
+<li>
+<p>GIMPのメニューから「<strong>ファイル</strong>」＞「<strong>名前を付けて保存</strong>」を選択します。
+<img src="/images/guides/color-change/7.webp" alt="名前を付けて保存"></p>
+</li>
+<li>
+<p>保存ダイアログが表示されたら、名前の入力欄をクリックします。
+<img src="/images/guides/color-change/8.webp" alt="名前欄の選択"></p>
+</li>
+<li>
+<p>先ほどUnityのエクスプローラーからコピーしておいたフォルダのパスをアドレス欄に貼り付けて、<strong>Enter</strong>キーを押してUnityの <code>tex</code> フォルダへ移動します。
+<img src="/images/guides/color-change/9.webp" alt="パスの貼り付け"></p>
+</li>
+<li>
+<p>ファイル名を <strong><code>.body.xcf</code></strong> に変更して保存します。
+<strong>【重要】 ファイル名の頭にドット <code>.</code> をつけるのが非常に重要です！</strong></p>
+<p><img src="/images/guides/color-change/10.webp" alt=".body.xcfで保存"></p>
+<blockquote>
+<p>[!WARNING]
+<strong>なぜ頭に <code>.</code> をつけるの？</strong>
+ファイル名の頭に <code>.</code> を付け忘れると、Unityがこの作業ファイルを通常のテクスチャとして読み込んでしまい、プロジェクトの動作が非常に重くなったり、同じテクスチャが2つ存在するように見えたりと、様々なトラブルの原因になります。必ず「<code>.body.xcf</code>」のようにドットから始まるファイル名で保存してください。</p>
+</blockquote>
+</li>
+<li>
+<p>同様にして、<code>bodyE.psd</code>、<code>karada.psd</code>、<code>mofu.psd</code> もそれぞれ開いて、Unityの <code>tex</code> フォルダ内に <strong><code>.bodyE.xcf</code></strong>、<strong><code>.karada.xcf</code></strong>、<strong><code>.mofu.xcf</code></strong> という名前で保存します。
+(※無印「フラット」以外のアバターバージョンでは <code>cloth.psd</code> など衣装のPSDもあるため、それらも同様に作業用 <code>.xcf</code> ファイルとして保存しておきます)</p>
+<p><img src="/images/guides/color-change/11.webp" alt="他のファイルも保存"></p>
+</li>
+</ol>
+<hr>
+<h3 id="step-3-gimpで顔や体のお好みの色を変更する">Step 3. GIMPで顔や体のお好みの色を変更する</h3>
+<p>準備が完了したら、実際に色を変更していきます。ここでは例として、フラットくんの顔（Body）の基本的な色（ベージュ部分）を変える方法を解説します。</p>
+<ol>
+<li>先ほどUnityの <code>tex</code> フォルダに保存した <strong><code>.body.xcf</code></strong> をGIMPで開きます。</li>
+<li>画面右下の「レイヤー」タブから、ベージュ色で塗られている <strong>「メイン」</strong> というレイヤーをクリックして選択します。
+<img src="/images/guides/color-change/12.webp" alt="メインレイヤーを選択">
+<img src="/images/guides/color-change/13.webp" alt="レイヤーの拡大"></li>
+</ol>
+<p>色の変え方には、仕上がりを見ながら調整する <a href="#%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3a%E7%9B%B4%E6%84%9F%E7%9A%84%E3%81%AB%E8%89%B2%E3%82%92%E6%B1%BA%E3%82%81%E3%82%8B%E6%84%9F%E8%A6%9A%E6%B4%BE%E5%90%91%E3%81%91%E3%81%AE%E6%96%B9%E6%B3%95"><code>「感覚派向けの方法」</code></a> と、最初からカラーコードを指定してきれいに塗る <a href="#%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3b%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%B3%E3%83%BC%E3%83%89%E3%81%A7%E3%81%8D%E3%81%A3%E3%81%A1%E3%82%8A%E6%B1%BA%E3%82%81%E3%82%8B%E7%90%86%E8%AB%96%E6%B4%BE%E5%90%91%E3%81%91%E3%81%AE%E6%96%B9%E6%B3%95"><code>「理論派向けの方法」</code></a> の2種類があります。好みに合わせて選んでみてください！</p>
+<h4 id="パターンa直感的に色を決める感覚派向けの方法">パターンA：直感的に色を決める「感覚派向けの方法」</h4>
+<p>画面を見ながらスライダーをいじって、お気に入りの色を探したい方におすすめの手順です。</p>
+<ol>
+<li>
+<p>GIMPの上部メニューから、「<strong>色</strong>」＞「<strong>色相・彩度</strong>」を選択します。
+<img src="/images/guides/color-change/14.webp" alt="色相・彩度を選択"></p>
+</li>
+<li>
+<p>表示された設定ダイアログで「色相」「輝度」「彩度」のバーを左右に動かし、プレビューを見ながら好きな色に調整して「OK」をクリックします。
+<img src="/images/guides/color-change/15.webp" alt="色を調整"></p>
+</li>
+</ol>
+<h4 id="パターンbカラーコードできっちり決める理論派向けの方法">パターンB：カラーコードできっちり決める「理論派向けの方法」</h4>
+<p>あらかじめ使いたいカラーコードが決まっていて、単色できれいに塗りつぶしたい場合におすすめの手順です。</p>
+<ol>
+<li>
+<p>レイヤー一覧にある「メイン」を右クリックし、「<strong>レイヤーマスクの追加</strong>」をクリックします。
+<img src="/images/guides/color-change/16.webp" alt="レイヤーマスクの追加"></p>
+</li>
+<li>
+<p>オプション画面で「<strong>レイヤーのアルファチャンネルを移転</strong>」を選択し、「<strong>追加</strong>」ボタンを押します。
+<img src="/images/guides/color-change/17.webp" alt="アルファチャンネルを移転"></p>
+</li>
+<li>
+<p>「メイン」レイヤーのサムネイルの右側に、白黒のマスク画像が追加されたことを確認します。
+<img src="/images/guides/color-change/18.webp" alt="マスク追加の確認"></p>
+</li>
+<li>
+<p>カラーパレットから変更したい色（メインに塗りたいお好みの色）を選択します。
+<img src="/images/guides/color-change/19.webp" alt="カラーパレット選択"></p>
+</li>
+<li>
+<p>「メイン」レイヤーの<strong>ベージュ色のサムネイルの側</strong>（追加したマスクではなく、元の画像サムネイル）をクリックして選択します。
+<img src="/images/guides/color-change/20.webp" alt="元のサムネイルを選択"></p>
+</li>
+<li>
+<p>キーボードの <strong><code>Ctrl + .</code></strong> （描画色での塗りつぶしショートカットキー）を押します。レイヤーが指定した色で綺麗に塗りつぶされます。
+<img src="/images/guides/color-change/21.webp" alt="塗りつぶし実行"></p>
+</li>
+</ol>
+<hr>
+<h3 id="step-4-画像をエクスポートしてunityに適用する">Step 4. 画像をエクスポートしてUnityに適用する</h3>
+<p>色を変更できたら、Unityがテクスチャとして読み込める画像形式（PNG）でエクスポート（書き出し）します。</p>
+<ol>
+<li>
+<p>キーボードの <strong><code>Ctrl + E</code></strong> を押して、エクスポート画面を開きます。
+<img src="/images/guides/color-change/22.webp" alt="エクスポート画面を開く"></p>
+</li>
+<li>
+<p>ファイル名の先頭にあるドットを削除して、<strong><code>body.png</code></strong> に変更します。
+(※または、画面の下部リストにある既存の <code>body.png</code> をダブルクリックして選択しても構いません)</p>
+</li>
+<li>
+<p>「エクスポート」をクリックすると上書き保存の警告画面が出るので、「<strong>置き換え</strong>」をクリックします。
+<img src="/images/guides/color-change/23.webp" alt="置き換えを選択"></p>
+</li>
+<li>
+<p>ワンテンポ遅れて「画像をPNGでエクスポート」という設定ウィンドウがポップアップします。（※非常に見落としやすいので注意！）
+この画面で「<strong>エクスポート</strong>」ボタンを押します。
+<img src="/images/guides/color-change/24.webp" alt="エクスポート設定ウィンドウ"></p>
+<blockquote>
+<p>[!TIP]
+このとき、<strong>Compression level (圧縮レベル)を 0</strong> に設定しておくのがおすすめです。圧縮に時間がかからなくなるため、保存や書き出しが非常にスムーズになります。
+(※圧縮レベルを0にするとファイルの容量は大きくなりますが、VRChatにアバターをアップロードする際にUnity側で自動的に圧縮されるため、他プレイヤーへの影響は心配ありません)</p>
+</blockquote>
+</li>
+<li>
+<p>エクスポートした直後の状態では、まだUnity上のフラットくんの見た目は変わっていません。
+<img src="/images/guides/color-change/25.webp" alt="Unityの画面(未更新)"></p>
+</li>
+<li>
+<p>Unityの画面をクリックしてアクティブ（操作可能状態）にすると、自動的に画像データの再読み込みが走り、フラットくんの色が先ほど変更したお好みの色に変わります！
+<img src="/images/guides/color-change/26.webp" alt="Unityの画面(更新後)"></p>
+</li>
+<li>
+<p>一度エクスポートしたら、以降はCtrl+Eを押すだけで一発でエクスポートできるようになります。</p>
+</li>
+</ol>
+<hr>
+<h3 id="step-5-保存とその他のポイント">Step 5. 保存とその他のポイント</h3>
+<h4 id="作業ファイルのこまめな保存">作業ファイルのこまめな保存</h4>
+<p>エクスポートしただけでは、GIMPのレイヤー情報などが保存されません。作業を途中でやめたり、後から調整できるようにするために、GIMP側でもこまめに <strong><code>Ctrl + S</code></strong> を押して保存（XCFファイルとしての保存）を忘れないようにしましょう！</p>
+<p><img src="/images/guides/color-change/27.webp" alt="Ctrl+Sで作業保存"></p>
+<h4 id="瞳や目を光らせたい場合">瞳や目を光らせたい場合</h4>
+<p>目をはじめとする一部のパーツの色を綺麗に変えるには、<strong><code>body</code> と <code>bodyE</code> の両方の色を変更する</strong>必要があります。</p>
+<ul>
+<li><strong><code>body</code></strong>: 通常の明るさで表示される色（テクスチャのベース）</li>
+<li><strong><code>bodyE</code></strong>: 暗闇で光る発光（Emission）用の色
+この2つの色が混ざり合って画面に描画されるため、両方を同じように調整すると自然で綺麗な仕上がりになります。</li>
+</ul>
+<h4 id="エクスポート中の真っ白真っピンク画面に注意">エクスポート中の真っ白・真っピンク画面に注意</h4>
+<p>画像をエクスポートし始めた瞬間、または書き出し処理の最中に大急ぎでUnityの画面に切り替えると、画像の書き込みが完了していないため、Unity上でアバターが真っ白やピンク色のエラーテクスチャになってしまうことがあります。</p>
+<p><img src="/images/guides/color-change/28.webp" alt="エラーの真っ白画面"></p>
+<p>この状態になっても慌てる必要はありません。画像の書き出しが終わるのを確認してから、一度他のフォルダを選択するなどして、再度Unityの画面をアクティブにすれば正常に読み込まれます。</p>
+<hr>
+<p>これで自分だけのカラー改変手順は完了です。
+アバターの毛並みの色を大きく変える以外にも、模様を描き加えたり、服の色を変えてみる、模様をがらっと変更してみるなど、自由にアバターを彩ってみてください！</p>
+<p><a href="/guide/9-cross-platform/">次のステップへ：アバターをクロスプラットフォーム（Quest・スマホ）に対応させる</a></p> </article> </main> <!-- Navigation Steps --> <nav class="guide-pagination" data-astro-cid-y3ba2w7m> <a href="/guide/7-dress-up/" class="pg-btn pg-btn-prev" data-astro-cid-y3ba2w7m> <span class="pg-btn-label" data-astro-cid-y3ba2w7m>⬅ PREVIOUS STEP 7</span> <span class="pg-btn-title" data-astro-cid-y3ba2w7m>Modular Avatarで簡単に着替えをする</span> </a> <a href="/guide/9-cross-platform/" class="pg-btn pg-btn-next" data-astro-cid-y3ba2w7m> <span class="pg-btn-label" data-astro-cid-y3ba2w7m>NEXT STEP 9 ➡</span> <span class="pg-btn-title" data-astro-cid-y3ba2w7m>クロスプラットフォーム対応</span> </a> </nav></div> <script type="module">function r(){document.querySelectorAll(".prose blockquote").forEach(e=>{if(e.classList.contains("callout"))return;const a=e.querySelectorAll("p");if(a.length===0)return;const o=a[0],c=o.innerHTML.trim().match(/^\[!(NOTE|TIP|WARNING|IMPORTANT|CAUTION)\]/i);if(c){const t=c[1].toUpperCase();e.classList.add("callout",`callout-${t.toLowerCase()}`),o.innerHTML=o.innerHTML.replace(/^\[!(NOTE|TIP|WARNING|IMPORTANT|CAUTION)\]\s*(<br\s*\/?>)?/i,"").trim();const n=document.createElement("div");n.className="callout-header";let l="💡",s="NOTE";t==="TIP"?(l="✨",s="TIP"):t==="WARNING"?(l="⚠️",s="WARNING"):t==="IMPORTANT"?(l="🚨",s="IMPORTANT"):t==="CAUTION"&&(l="🔥",s="CAUTION"),n.innerHTML=`<span class="callout-icon">${l}</span><span class="callout-label">${s}</span>`,e.insertBefore(n,e.firstChild)}})}document.addEventListener("DOMContentLoaded",r);r();</script> <footer class="footer" data-astro-cid-sz7xmlte> <div class="footer-container" data-astro-cid-sz7xmlte> <div class="footer-brand" data-astro-cid-sz7xmlte> <a href="/" class="footer-logo-link" data-astro-cid-sz7xmlte> <img src="/images/logo.webp" alt="フラットファンクラブ ロゴ" class="footer-logo" data-astro-cid-sz7xmlte> </a> <p class="footer-desc" data-astro-cid-sz7xmlte>
+VRChat向け3Dケモノアバター「フラット」くんの魅力を伝える、非公式のファンサイトです。
+</p> </div> <div class="footer-links-grid" data-astro-cid-sz7xmlte> <div class="footer-group" data-astro-cid-sz7xmlte> <h4 data-astro-cid-sz7xmlte>サイトリンク</h4> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/" data-astro-cid-sz7xmlte>ホーム</a></li> <li data-astro-cid-sz7xmlte><a href="/guide/" data-astro-cid-sz7xmlte>入門ガイド</a></li> <li data-astro-cid-sz7xmlte><a href="/community/" data-astro-cid-sz7xmlte>コミュニティ</a></li> <li data-astro-cid-sz7xmlte><a href="/items/" data-astro-cid-sz7xmlte>アイテム</a></li> <li data-astro-cid-sz7xmlte><a href="/history/" data-astro-cid-sz7xmlte>歴史 timeline</a></li> </ul> </div> <div class="footer-group" data-astro-cid-sz7xmlte> <h4 data-astro-cid-sz7xmlte>公式リンク</h4> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="https://booth.pm/ja/search/%E3%83%95%E3%83%A9%E3%83%83%E3%83%88" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte>Booth検索（フラット）</a></li> <li data-astro-cid-sz7xmlte><a href="https://booth.pm/ja/items/3562180" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte>らすちんワークス（無印）</a></li> <li data-astro-cid-sz7xmlte><a href="https://booth.pm/ja/items/5780006" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte>らすちんワークス（2nd）</a></li> <li data-astro-cid-sz7xmlte><a href="https://booth.pm/ja/items/7922210" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte>らすちんワークス（4th）</a></li> <li data-astro-cid-sz7xmlte><a href="https://booth.pm/ja/items/7537714" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte>らすちんワークス（If Ver）</a></li> </ul> </div> </div> </div> <div class="footer-bottom" data-astro-cid-sz7xmlte> <div class="footer-disclaimer" data-astro-cid-sz7xmlte> <p data-astro-cid-sz7xmlte>※本サイトはファンが作成した非公式のファンクラブサイトです※</p> <p data-astro-cid-sz7xmlte>アバターの仕様、販売価格等は予告なく変更される場合がありますので、最新情報は公式Boothストアをご確認ください。</p> <p data-astro-cid-sz7xmlte>当サイトの掲載内容は1ファンの個人的な見解であり、公式の発表や方針に代わるものではありません。</p> <p data-astro-cid-sz7xmlte>アバター著作権：©らすちん (Rustin Works)</p> </div> <div class="footer-copyright" data-astro-cid-sz7xmlte>
+&copy; 2026 フラットファンクラブ. Created by fans with 💛
+</div> </div> </footer> </body></html>

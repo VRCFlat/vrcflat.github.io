@@ -1,0 +1,184 @@
+<!DOCTYPE html><html lang="ja" data-astro-cid-y3ba2w7m> <head><!-- Global Metadata --><meta charset="utf-8"><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-VNVFWMWXMC"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VNVFWMWXMC');
+</script><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="icon" type="image/png" sizes="16x16" href="/icon16.png"><link rel="icon" type="image/png" sizes="48x48" href="/icon48.png"><link rel="icon" type="image/png" sizes="128x128" href="/icon128.png"><link rel="apple-touch-icon" href="/icon128.png"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="フラットファンクラブ" href="/rss.xml"><meta name="generator" content="Astro v6.4.2"><!-- Canonical URL --><link rel="canonical" href="https://vrcflat.github.io/guide/9-cross-platform/"><!-- Primary Meta Tags --><title>【初心者向け】VRChatアバターのQuest・スマホ対応（クロスプラットフォーム）方法 | フラットファンクラブ</title><meta name="title" content="【初心者向け】VRChatアバターのQuest・スマホ対応（クロスプラットフォーム）方法 | フラットファンクラブ"><meta name="description" content="「せっかく作った可愛いフラットくん、たくさんの人に見てもらいたい！」そんな願いを叶える、無料ツールVRCQuestToolsを使った、超お手軽なAndroid・iOSプラットフォーム対応手順。"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://vrcflat.github.io/guide/9-cross-platform/"><meta property="og:title" content="【初心者向け】VRChatアバターのQuest・スマホ対応（クロスプラットフォーム）方法 | フラットファンクラブ"><meta property="og:description" content="「せっかく作った可愛いフラットくん、たくさんの人に見てもらいたい！」そんな願いを叶える、無料ツールVRCQuestToolsを使った、超お手軽なAndroid・iOSプラットフォーム対応手順。"><meta property="og:image" content="https://vrcflat.github.io/_astro/ogp.BN_HifPl.webp"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://vrcflat.github.io/guide/9-cross-platform/"><meta property="twitter:title" content="【初心者向け】VRChatアバターのQuest・スマホ対応（クロスプラットフォーム）方法 | フラットファンクラブ"><meta property="twitter:description" content="「せっかく作った可愛いフラットくん、たくさんの人に見てもらいたい！」そんな願いを叶える、無料ツールVRCQuestToolsを使った、超お手軽なAndroid・iOSプラットフォーム対応手順。"><meta property="twitter:image" content="https://vrcflat.github.io/_astro/ogp.BN_HifPl.webp"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://vrcflat.github.io/"},{"@type":"ListItem","position":2,"name":"入門ガイド","item":"https://vrcflat.github.io/guide/"},{"@type":"ListItem","position":3,"name":"STEP 9: クロスプラットフォーム対応","item":"https://vrcflat.github.io/guide/9-cross-platform/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"【初心者向け】VRChatアバターのQuest・スマホ対応（クロスプラットフォーム）方法","description":"「せっかく作った可愛いフラットくん、たくさんの人に見てもらいたい！」そんな願いを叶える、無料ツールVRCQuestToolsを使った、超お手軽なAndroid・iOSプラットフォーム対応手順。","url":"https://vrcflat.github.io/guide/9-cross-platform/","inLanguage":"ja","author":{"@type":"Organization","name":"フラットファンクラブ"},"publisher":{"@type":"Organization","name":"フラットファンクラブ"}}</script><link rel="stylesheet" href="/_astro/Footer.CQaNj7Xt.css">
+<style>.guide-layout[data-astro-cid-y3ba2w7m]{max-width:900px;margin:2rem auto;padding:0 1.5rem}.breadcrumbs[data-astro-cid-y3ba2w7m]{display:flex;gap:8px;align-items:center;font-size:.85rem;color:var(--color-text-muted);margin-bottom:2rem}.breadcrumbs[data-astro-cid-y3ba2w7m] a[data-astro-cid-y3ba2w7m]{color:var(--color-brand-dark);text-decoration:none;font-weight:700;transition:var(--transition-fast)}.breadcrumbs[data-astro-cid-y3ba2w7m] a[data-astro-cid-y3ba2w7m]:hover{color:var(--color-accent)}.step-hero[data-astro-cid-y3ba2w7m]{background:linear-gradient(135deg,#fbc774,#d47311);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:2.5rem;margin-bottom:3rem;box-shadow:var(--shadow-glass);position:relative;overflow:hidden}.step-hero[data-astro-cid-y3ba2w7m] h1[data-astro-cid-y3ba2w7m]{color:var(--color-text-white);text-shadow:0 4px 10px rgba(0,0,0,.1)}.step-hero-desc[data-astro-cid-y3ba2w7m]{color:#ffffffe6;text-shadow:0 2px 8px rgba(0,0,0,.08)}.step-indicator[data-astro-cid-y3ba2w7m]{background-color:#ffffff40;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3)}.step-hero-number[data-astro-cid-y3ba2w7m]{font-family:Fredoka,sans-serif;font-size:5rem;font-weight:900;color:#f4ad391f;position:absolute;top:-10px;right:20px;line-height:1;pointer-events:none}.step-indicator[data-astro-cid-y3ba2w7m]{display:inline-block;background-color:#ffffff40;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);color:var(--color-text-white);font-weight:800;font-size:.75rem;padding:4px 12px;border-radius:20px;margin-bottom:1rem;letter-spacing:.05em;text-transform:uppercase;font-family:Fredoka,sans-serif}.step-hero[data-astro-cid-y3ba2w7m] h1[data-astro-cid-y3ba2w7m]{font-size:clamp(1.6rem,3.5vw,2.2rem);color:var(--color-text-white);margin-bottom:1rem;line-height:1.3;text-shadow:0 4px 10px rgba(0,0,0,.1)}.step-hero-desc[data-astro-cid-y3ba2w7m]{color:#ffffffe6;font-size:1.05rem;line-height:1.6;text-shadow:0 2px 8px rgba(0,0,0,.08)}.step-meta[data-astro-cid-y3ba2w7m]{display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem;line-height:1.2}.keyword-tag[data-astro-cid-y3ba2w7m]{color:#ffffffbf;font-size:.75rem;text-shadow:0 1px 3px rgba(0,0,0,.05);transition:var(--transition-fast)}.keyword-tag[data-astro-cid-y3ba2w7m]:hover{color:#fff}.keyword-tag[data-astro-cid-y3ba2w7m]:not(:last-child):after{content:"•";margin-left:6px;color:#ffffff73}.guide-content-wrapper[data-astro-cid-y3ba2w7m]{background-color:var(--color-bg);padding:1rem 0}.guide-pagination[data-astro-cid-y3ba2w7m]{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:5rem;padding-top:2rem;border-top:2px dashed var(--color-border)}.pg-btn[data-astro-cid-y3ba2w7m]{background:var(--color-bg-glass);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:1.25rem;display:flex;flex-direction:column;text-decoration:none;transition:var(--transition-smooth);box-shadow:var(--shadow-glass)}.pg-btn[data-astro-cid-y3ba2w7m]:hover{border-color:var(--color-brand);background:var(--color-bg-secondary);transform:translateY(-2px)}.pg-btn-label[data-astro-cid-y3ba2w7m]{font-size:.75rem;font-weight:700;color:var(--color-brand-dark);margin-bottom:4px;text-transform:uppercase}.pg-btn-title[data-astro-cid-y3ba2w7m]{font-size:.95rem;font-weight:800;color:var(--color-text);line-height:1.4}.pg-btn-prev[data-astro-cid-y3ba2w7m]{text-align:left;align-items:flex-start}.pg-btn-next[data-astro-cid-y3ba2w7m]{text-align:right;align-items:flex-end;border-color:#f4ad394d;background:linear-gradient(135deg,#fdfbf7e6,#f4ad390d)}.pg-btn-next[data-astro-cid-y3ba2w7m]:hover{border-color:var(--color-accent)}.pg-btn-next[data-astro-cid-y3ba2w7m] .pg-btn-label[data-astro-cid-y3ba2w7m]{color:var(--color-accent)}@media(max-width:600px){.guide-pagination[data-astro-cid-y3ba2w7m]{grid-template-columns:1fr;gap:1rem}.step-hero[data-astro-cid-y3ba2w7m]{padding:1.5rem}}
+</style></head> <body data-astro-cid-y3ba2w7m> <header class="header" data-astro-cid-3ef6ksr2> <nav class="nav-container" data-astro-cid-3ef6ksr2> <div class="nav-brand" data-astro-cid-3ef6ksr2> <a href="/" class="brand-link brand-font" data-astro-cid-3ef6ksr2> <span class="brand-icon" data-astro-cid-3ef6ksr2>🐾</span> フラットファンクラブ </a> </div> <!-- Desktop Navigation --> <div class="nav-links desktop-only" data-astro-cid-3ef6ksr2> <a href="/" class="nav-item" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> ホーム </a> <a href="/guide/" class="nav-item" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> 入門ガイド </a> <a href="/community/" class="nav-item" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> コミュニティ </a> <a href="/items/" class="nav-item" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> アイテム </a> <a href="/history/" class="nav-item" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> 歴史 </a> </div> <!-- Mobile Menu Button --> <button class="mobile-menu-toggle mobile-only" aria-label="メニューを開閉する" id="menuToggle" data-astro-cid-3ef6ksr2> <span class="bar" data-astro-cid-3ef6ksr2></span> <span class="bar" data-astro-cid-3ef6ksr2></span> <span class="bar" data-astro-cid-3ef6ksr2></span> </button> </nav> <!-- Mobile Dropdown Navigation --> <div class="mobile-menu mobile-only" id="mobileMenu" data-astro-cid-3ef6ksr2> <div class="mobile-menu-inner" data-astro-cid-3ef6ksr2> <a href="/" class="mobile-nav-item" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> ホーム </a> <a href="/guide/" class="mobile-nav-item" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> 入門ガイド </a> <a href="/community/" class="mobile-nav-item" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> コミュニティ </a> <a href="/items/" class="mobile-nav-item" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> アイテム </a> <a href="/history/" class="mobile-nav-item" data-astro-cid-3ef6ksr2="true" data-astro-cid-eimmu3lg> 歴史 </a> </div> </div> </header>  <script type="module">const e=document.getElementById("menuToggle"),t=document.getElementById("mobileMenu");e&&t&&(e.addEventListener("click",()=>{e.classList.toggle("open"),t.classList.toggle("open")}),t.querySelectorAll(".mobile-nav-item").forEach(o=>{o.addEventListener("click",()=>{e.classList.remove("open"),t.classList.remove("open")})}));</script> <div class="guide-layout" data-astro-cid-y3ba2w7m> <!-- Breadcrumbs --> <nav class="breadcrumbs" data-astro-cid-y3ba2w7m> <a href="/" data-astro-cid-y3ba2w7m>ホーム</a> <span data-astro-cid-y3ba2w7m>/</span> <a href="/guide/" data-astro-cid-y3ba2w7m>入門ガイド</a> <span data-astro-cid-y3ba2w7m>/</span> <span style="color: var(--color-text); font-weight: 700;" data-astro-cid-y3ba2w7m>STEP 9</span> </nav> <!-- Step Hero Header --> <header class="step-hero" data-astro-cid-y3ba2w7m> <span class="step-hero-number" data-astro-cid-y3ba2w7m>9</span> <span class="step-indicator" data-astro-cid-y3ba2w7m>STEP 9 / 9</span> <h1 data-astro-cid-y3ba2w7m>クロスプラットフォーム対応</h1> <p class="step-hero-desc" data-astro-cid-y3ba2w7m>「せっかく作った可愛いフラットくん、たくさんの人に見てもらいたい！」そんな願いを叶える、無料ツールVRCQuestToolsを使った、超お手軽なAndroid・iOSプラットフォーム対応手順。</p> <div class="step-meta" data-astro-cid-y3ba2w7m> <span class="keyword-tag" data-astro-cid-y3ba2w7m>#VRC Quest対応</span><span class="keyword-tag" data-astro-cid-y3ba2w7m>#VRChat アバター Quest化</span><span class="keyword-tag" data-astro-cid-y3ba2w7m>#VRCQuestTools 使い方</span><span class="keyword-tag" data-astro-cid-y3ba2w7m>#スマホ対応 アバター</span> </div> </header> <!-- Main Rendered Markdown --> <main class="guide-content-wrapper" data-astro-cid-y3ba2w7m> <article class="prose" data-astro-cid-y3ba2w7m> <p>服を着せて、色変更もして、これぞ自分！というフラットくんが完成しました！おめでとうございます！
+さて、せっかく作ったアバターは、なるべくたくさんのワールドに行けたり、たくさんの人に見てもらえたりした方が嬉しいですよね？</p>
+<p>通常のアップロード方法ではPC（デスクトップモードやPC接続したVR）で遊んでいる人にしか見えないアバターになりますが、<strong>「クロスプラットフォーム対応（Quest化・スマホ対応）」</strong> を行うと、Meta QuestなどのVR機器単体や、Androidスマホ、iPhone（iOS）から遊んでいる人にもあなたの可愛いフラットくんの姿を見せることができるようになります。</p>
+<p>この手順では、<strong>「とにかく簡単」「とりあえず表示される」</strong> ことを最優先にした一番シンプルな対応手順をご紹介します！
+（よりこだわりたい場合は様々な設定や手法がありますが、まずはここからスタートしてみましょう）</p>
+<p>まず事前準備として、<strong><a href="/downloads/VrcQuestTool.unitypackage">VrcQuestTool.unitypackage</a></strong> (クロスプラットフォーム対応ツール) をダウンロードしておいてください。</p>
+<hr>
+<h3 id="step-1-安全のためにプロジェクトをコピーする">Step 1. 安全のためにプロジェクトをコピーする</h3>
+<p>VRCQuestToolsによるプラットフォーム変換を行う際、プロジェクト内で他のツールと干渉して不具合が起きたり、設定の切り替えミスで次回以降の改変時に混乱したりするのを防ぐため、<strong>「プロジェクトフォルダごとコピーして作業する」</strong> ことを強くおすすめします。</p>
+<ol>
+<li>
+<p>自分のフラットくんが完成した状態（前ステップの作業が終わった状態）です。</p>
+<p><img src="/images/guides/cp/1.webp" alt="アバターの完成状態"></p>
+</li>
+<li>
+<p>一度Unityを閉じます。保存（Save Scenes）を聞かれたら、忘れずに <strong>「Save」</strong> を押して保存してください。</p>
+<p><img src="/images/guides/cp/2.webp" alt="Unityの保存ダイアログ"></p>
+</li>
+<li>
+<p>ALCOMを起動し、作成した自分のプロジェクトの右側にある <strong><code>…</code></strong> ボタンをクリックして <strong>「プロジェクトの保存場所を開く」</strong> をクリックします。</p>
+<p><img src="/images/guides/cp/3.webp" alt="プロジェクトの保存場所を開く"></p>
+</li>
+<li>
+<p>エクスプローラーでフォルダが開くので、アドレスバーまたは <strong><code>↑</code></strong> ボタンを押して1つ上の階層（プロジェクトフォルダが並んでいる階層）に移動します。</p>
+<p><img src="/images/guides/cp/4.webp" alt="1つ上の階層へ移動"></p>
+</li>
+<li>
+<p>コピー元となる自分のプロジェクトフォルダ（例：<code>MyFlatProject</code>）が選択されている状態になります。</p>
+<p><img src="/images/guides/cp/5.webp" alt="プロジェクトフォルダの選択"></p>
+</li>
+<li>
+<p>フォルダをコピー（<strong><code>Ctrl + C</code></strong>）します。</p>
+<p><img src="/images/guides/cp/6.webp" alt="フォルダをコピー"></p>
+</li>
+<li>
+<p>同じフォルダ内で貼り付け（<strong><code>Ctrl + V</code></strong>）を実行します（コピー処理に少し時間がかかります）。</p>
+<p><img src="/images/guides/cp/7.webp" alt="フォルダを貼り付け"></p>
+</li>
+<li>
+<p>コピーされた新しいフォルダ（例: <code>MyFlatProject - コピー</code>）が生成されます。</p>
+<p><img src="/images/guides/cp/8.webp" alt="コピーフォルダの生成"></p>
+</li>
+<li>
+<p>コピーしたフォルダのフォルダ名を分かりやすい名前に変更しておきます（例: クロスプラットフォーム対応なので <code>MyFlatProject_CP</code> など。適当で大丈夫です）。</p>
+<p><img src="/images/guides/cp/9.webp" alt="フォルダ名の変更"></p>
+</li>
+</ol>
+<hr>
+<h3 id="step-2-コピーしたプロジェクトをalcomに追加して開く">Step 2. コピーしたプロジェクトをALCOMに追加して開く</h3>
+<ol>
+<li>
+<p>ALCOMに戻り、画面右上にある「プロジェクトを作成」ボタンの右隣にある <strong>矢印（▼）</strong> をクリックし、 <strong>「既存のプロジェクトを追加」</strong> を選択します。</p>
+<p><img src="/images/guides/cp/10.webp" alt="既存のプロジェクトを追加"></p>
+</li>
+<li>
+<p>フォルダの選択ダイアログが表示されるので、先ほど作成（リネーム）したコピー版のフォルダを選択します。</p>
+<p><img src="/images/guides/cp/11.webp" alt="コピーフォルダを選択"></p>
+</li>
+<li>
+<p>ALCOMのプロジェクト一覧に新しく追加されるので、それを確認して <strong>「UNITYを開く」</strong> ボタンをクリックします。</p>
+<p><img src="/images/guides/cp/12.webp" alt="新プロジェクトでUNITYを開く"></p>
+</li>
+<li>
+<p>コピー元のプロジェクトと全く同じ状態のUnity画面が開きます。</p>
+<p><img src="/images/guides/cp/13.webp" alt="Unityの起動完了"></p>
+</li>
+</ol>
+<hr>
+<h3 id="step-3-vrcquesttoolsを導入する">Step 3. VRCQuestToolsを導入する</h3>
+<ol>
+<li>
+<p>事前準備でダウンロードしておいた <strong><a href="/downloads/VrcQuestTool.unitypackage">VrcQuestTool.unitypackage</a></strong> をダブルクリックしてインポート（Import）します。</p>
+<p><img src="/images/guides/cp/14.webp" alt="VrcQuestToolをインポート"></p>
+</li>
+<li>
+<p>インポート処理が進むと「Confirm」画面が表示されるので、 <strong>「Install」</strong> をクリックします。</p>
+<p><img src="/images/guides/cp/15.webp" alt="VrcQuestToolのインストール"></p>
+</li>
+</ol>
+<hr>
+<h3 id="step-4-androidquestスマホ向けにビルドアップロード">Step 4. Android（Quest・スマホ）向けにビルド＆アップロード</h3>
+<ol>
+<li>
+<p>Unityの上部メニューから、 <strong>「Tools」 ＞ 「VRCQuestTools」 ＞ 「Show Avatar Builder」</strong> を選択します。</p>
+<p><img src="/images/guides/cp/16.webp" alt="Avatar Builderを起動"></p>
+</li>
+<li>
+<p>「VQT Avatar Builder」というウインドウが開くので、その中にある <strong>「開く」</strong> ボタンをクリックします。</p>
+<p><img src="/images/guides/cp/17.webp" alt="Avatar Builderの開くボタン"></p>
+</li>
+<li>
+<p>VRChat SDKのコントロールパネルが表示されます。「Platform(s)」の項目で <strong><code>Windows</code> のチェックを外し、代わりに <code>Android</code> にチェックを入れます</strong>。</p>
+</li>
+</ol>
+<blockquote>
+<p>[!WARNING]
+<strong>プラットフォームの変更ボタンがグレーアウトして押せません</strong></p>
+<p>UnityにAndroidビルドモジュールやiOSビルドモジュールがインストールされていない可能性が高いです。
+ALCOMの初期設定（Step 5. の環境構築ガイド）でチェックを忘れてしまっていた場合は、**<a href="https://kurotu.github.io/VRCQuestTools/ja/docs/tutorial/set-up-environment">VRC Quest Tools チュートリアルページ（環境構築）</a>**を参考にして、Unity Hubから追加のモジュールをインストールしてください。</p>
+</blockquote>
+<p><img src="/images/guides/cp/18.webp" alt="Androidプラットフォームに切り替え"></p>
+<ol start="4">
+<li>
+<p>「切り替えに時間がかかります」という旨の確認ダイアログが表示されるので、 <strong>「Confirm」</strong> をクリックしてしばらく待ちます。</p>
+<p><img src="/images/guides/cp/19.webp" alt="Confirmダイアログ"></p>
+</li>
+<li>
+<p>切り替え完了後、VQT Avatar Builderウインドウの <strong>「Build &#x26; Publish for Android」</strong> ボタンをクリックします。</p>
+<p><img src="/images/guides/cp/20.webp" alt="Android向けビルド＆パブリッシュ"></p>
+</li>
+<li>
+<p>VRChat SDK側で最終確認のダイアログが出るので、 <strong>「OK」</strong> をクリックします。</p>
+<p><img src="/images/guides/cp/21.webp" alt="アップロード確認OK"></p>
+</li>
+<li>
+<p>しばらく処理が進み、VQT Avatar Builderに <strong>「アップロードに成功しました。」</strong> と表示されれば、Android対応は完了です！</p>
+<p><img src="/images/guides/cp/22.webp" alt="Android対応の成功"></p>
+</li>
+</ol>
+<hr>
+<h3 id="step-5-iosiphone向けにビルドアップロード">Step 5. iOS（iPhone）向けにビルド＆アップロード</h3>
+<p>続けて、iPhoneなどのスマホユーザーから見えるようにiOS対応も行います。手順はAndroidとほぼ同じです。</p>
+<ol>
+<li>
+<p>VRChat SDKコントロールパネルの「Platform(s)」で、<strong><code>Android</code> のチェックを外し、代わりに <code>iOS</code> にチェックを入れます</strong>。</p>
+<p><img src="/images/guides/cp/23.webp" alt="iOSプラットフォームに切り替え"></p>
+</li>
+<li>
+<p>同様に、VQT Avatar Builderウインドウの <strong>「Build &#x26; Publish for iOS」</strong> ボタンをクリックし、SDK側の確認ダイアログで「OK」をクリックして進めます。アップロード完了までしばらく待ちます。</p>
+<p><img src="/images/guides/cp/24.webp" alt="iOS向けアップロード成功"></p>
+</li>
+</ol>
+<hr>
+<h3 id="step-6-vrchatやvrchat-webサイトでマークを確認する">Step 6. VRChatやVRChat Webサイトでマークを確認する</h3>
+<p>アップロード完了後、VRChat公式Webサイト（マイページ）やゲーム内でアバターの情報を確認してみましょう。
+アバターの対応プラットフォーム（プラットフォーム表記）欄に、<strong>Windows・Android・iOSの3つのマーク</strong>がすべて点灯していれば、完璧です！</p>
+<p><img src="/images/guides/cp/25.webp" alt="3プラットフォームのマーク点灯"></p>
+<p>これで、Quest単体やスマホから遊んでいるフレンドからも、あなたの可愛い姿が正常に見えるようになります！</p>
+<hr>
+<h3 id="step-7-後片付けコピーしたプロジェクトの削除">Step 7. 後片付け（コピーしたプロジェクトの削除）</h3>
+<p>このクロスプラットフォーム対応のために一時的に作成したコピー用プロジェクトは、アップロードが正常に完了した後は不要になります。今後の混乱を防ぐために削除しておきましょう。</p>
+<ol>
+<li>
+<p>Unityを終了し、ALCOMで、先ほど追加したコピープロジェクトの右側にある <strong><code>…</code></strong> ボタンをクリックし、 <strong>「プロジェクトを削除」</strong> をクリックします。</p>
+<p><img src="/images/guides/cp/26.webp" alt="ALCOMからコピープロジェクトを削除"></p>
+</li>
+<li>
+<p>確認ダイアログが表示されるので、 <strong>「プロジェクトのファイルも削除する」</strong> にチェックを入れて削除を完了します。</p>
+<p><img src="/images/guides/cp/27.webp" alt="プロジェクトファイルの完全削除"></p>
+</li>
+</ol>
+<p>これで後片付けもすべて完了です！本当にお疲れ様でした！</p>
+<hr>
+<h2 id="faq--tips">FAQ ＆ TIPS</h2>
+<h3 id="q-なんでわざわざプロジェクトをコピーして作業するの">Q. なんでわざわざプロジェクトをコピーして作業するの？</h3>
+<p><strong>A. 万が一のトラブル防止と、普段の改変作業の快適性を両立するためです。</strong></p>
+<ul>
+<li>プラットフォーム変換によって、プロジェクト内の様々な設定がQuest専用に代わります。これが原因でWindowsでの見た目がおかしくなることがたまにあります</li>
+<li>アバター改変ツールとQuestToolsが干渉してUnityが起動しなくなることがあります</li>
+<li>プラットフォーム設定を戻し忘れて、なぜかアップロードできない…といった問題が起きたります</li>
+</ul>
+<p>これらのトラブルを起こさず、安全に使い分けをするため、コピーしてアップロードしたら消すという運用が(とりあえずの対応のためには)一番手軽です。</p>
+<h3 id="q-クロスプラットフォーム対応は絶対にやらないとダメ">Q. クロスプラットフォーム対応は絶対にやらないとダメ？</h3>
+<p><strong>A. 必須ではありませんが、強くお勧めします！</strong>
+現在VRChatには「インポスター」という自動生成機能があり、対応していなくても荒い見た目のアバターが自動生成されて表示されるようになりました。しかし、自分で変換した方がはるかに綺麗で可愛いフラットくんの姿を相手に届けることができます。ぜひ対応してあげましょう！</p>
+<h3 id="q-しっぽが揺れなかったり服の見た目がpc版とズレているように見える">Q. しっぽが揺れなかったり、服の見た目がPC版とズレているように見える…</h3>
+<p><strong>A. 「とにかく簡単な自動変換」を行っているため、一部の機能制限があります。</strong>
+VR単機やスマホなどのプラットフォームは、動作制限（パフォーマンス制限）がPCよりも非常に厳しく設定されています。そのため、揺れる物や衣装の一部のギミックが制限によって削られたり、見た目が簡易化されたりします。またプラットフォーム間のパラメータの同期ずれという専門的な問題があり、服を着ているかどうかなどが異なる場合もあります。これはプラットフォームの仕様ですので、まずは「見えていること自体が素晴らしい！」と捉えていただければ幸いです。</p>
+<hr>
+<p>これでフラットくんの導入からカスタム、クロスプラットフォーム対応までの初心者向け全ガイドが完了しました！
+自分好みに可愛く仕上げたお気に入りのアバターと一緒に、もふもふに包まれた素敵なVRChatライフを満喫してください！🐾</p>
+<p>集会などでお会いできる日を楽しみにしています！</p> </article> </main> <!-- Navigation Steps --> <nav class="guide-pagination" data-astro-cid-y3ba2w7m> <a href="/guide/8-customize/" class="pg-btn pg-btn-prev" data-astro-cid-y3ba2w7m> <span class="pg-btn-label" data-astro-cid-y3ba2w7m>⬅ PREVIOUS STEP 8</span> <span class="pg-btn-title" data-astro-cid-y3ba2w7m>テクスチャを改変して自分だけのカラーにする</span> </a> <a href="/items/" class="pg-btn pg-btn-next" data-astro-cid-y3ba2w7m> <span class="pg-btn-label" data-astro-cid-y3ba2w7m>CONGRATS! FINISH 🐾</span> <span class="pg-btn-title" data-astro-cid-y3ba2w7m>衣装＆アイテムカタログを見る</span> </a> </nav></div> <script type="module">function r(){document.querySelectorAll(".prose blockquote").forEach(e=>{if(e.classList.contains("callout"))return;const a=e.querySelectorAll("p");if(a.length===0)return;const o=a[0],c=o.innerHTML.trim().match(/^\[!(NOTE|TIP|WARNING|IMPORTANT|CAUTION)\]/i);if(c){const t=c[1].toUpperCase();e.classList.add("callout",`callout-${t.toLowerCase()}`),o.innerHTML=o.innerHTML.replace(/^\[!(NOTE|TIP|WARNING|IMPORTANT|CAUTION)\]\s*(<br\s*\/?>)?/i,"").trim();const n=document.createElement("div");n.className="callout-header";let l="💡",s="NOTE";t==="TIP"?(l="✨",s="TIP"):t==="WARNING"?(l="⚠️",s="WARNING"):t==="IMPORTANT"?(l="🚨",s="IMPORTANT"):t==="CAUTION"&&(l="🔥",s="CAUTION"),n.innerHTML=`<span class="callout-icon">${l}</span><span class="callout-label">${s}</span>`,e.insertBefore(n,e.firstChild)}})}document.addEventListener("DOMContentLoaded",r);r();</script> <footer class="footer" data-astro-cid-sz7xmlte> <div class="footer-container" data-astro-cid-sz7xmlte> <div class="footer-brand" data-astro-cid-sz7xmlte> <a href="/" class="footer-logo-link" data-astro-cid-sz7xmlte> <img src="/images/logo.webp" alt="フラットファンクラブ ロゴ" class="footer-logo" data-astro-cid-sz7xmlte> </a> <p class="footer-desc" data-astro-cid-sz7xmlte>
+VRChat向け3Dケモノアバター「フラット」くんの魅力を伝える、非公式のファンサイトです。
+</p> </div> <div class="footer-links-grid" data-astro-cid-sz7xmlte> <div class="footer-group" data-astro-cid-sz7xmlte> <h4 data-astro-cid-sz7xmlte>サイトリンク</h4> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="/" data-astro-cid-sz7xmlte>ホーム</a></li> <li data-astro-cid-sz7xmlte><a href="/guide/" data-astro-cid-sz7xmlte>入門ガイド</a></li> <li data-astro-cid-sz7xmlte><a href="/community/" data-astro-cid-sz7xmlte>コミュニティ</a></li> <li data-astro-cid-sz7xmlte><a href="/items/" data-astro-cid-sz7xmlte>アイテム</a></li> <li data-astro-cid-sz7xmlte><a href="/history/" data-astro-cid-sz7xmlte>歴史 timeline</a></li> </ul> </div> <div class="footer-group" data-astro-cid-sz7xmlte> <h4 data-astro-cid-sz7xmlte>公式リンク</h4> <ul data-astro-cid-sz7xmlte> <li data-astro-cid-sz7xmlte><a href="https://booth.pm/ja/search/%E3%83%95%E3%83%A9%E3%83%83%E3%83%88" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte>Booth検索（フラット）</a></li> <li data-astro-cid-sz7xmlte><a href="https://booth.pm/ja/items/3562180" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte>らすちんワークス（無印）</a></li> <li data-astro-cid-sz7xmlte><a href="https://booth.pm/ja/items/5780006" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte>らすちんワークス（2nd）</a></li> <li data-astro-cid-sz7xmlte><a href="https://booth.pm/ja/items/7922210" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte>らすちんワークス（4th）</a></li> <li data-astro-cid-sz7xmlte><a href="https://booth.pm/ja/items/7537714" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte>らすちんワークス（If Ver）</a></li> </ul> </div> </div> </div> <div class="footer-bottom" data-astro-cid-sz7xmlte> <div class="footer-disclaimer" data-astro-cid-sz7xmlte> <p data-astro-cid-sz7xmlte>※本サイトはファンが作成した非公式のファンクラブサイトです※</p> <p data-astro-cid-sz7xmlte>アバターの仕様、販売価格等は予告なく変更される場合がありますので、最新情報は公式Boothストアをご確認ください。</p> <p data-astro-cid-sz7xmlte>当サイトの掲載内容は1ファンの個人的な見解であり、公式の発表や方針に代わるものではありません。</p> <p data-astro-cid-sz7xmlte>アバター著作権：©らすちん (Rustin Works)</p> </div> <div class="footer-copyright" data-astro-cid-sz7xmlte>
+&copy; 2026 フラットファンクラブ. Created by fans with 💛
+</div> </div> </footer> </body></html>
