@@ -42,3 +42,8 @@ pnpm-debug.log*
 
 # node_modules (ルートに万が一存在した場合)
 node_modules/
+
+# Astro テスト関連（ローカル実行用）
+astro/tests/
+astro/test-results/
+astro/playwright-report/
