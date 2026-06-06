@@ -19,11 +19,11 @@ const currentBase = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BAS
       <div class="footer-group">
         <h4>サイトリンク</h4>
         <ul>
-          <li><a href={`${import.meta.env.BASE_URL}/`}>ホーム</a></li>
-          <li><a href={`${import.meta.env.BASE_URL}/guide/`}>入門ガイド</a></li>
-          <li><a href={`${import.meta.env.BASE_URL}/community/`}>コミュニティ</a></li>
-          <li><a href={`${import.meta.env.BASE_URL}/items/`}>アイテム</a></li>
-          <li><a href={`${import.meta.env.BASE_URL}/history/`}>歴史 timeline</a></li>
+          <li><a href={currentBase}>ホーム</a></li>
+          <li><a href={`${currentBase}guide/`}>入門ガイド</a></li>
+          <li><a href={`${currentBase}community/`}>コミュニティ</a></li>
+          <li><a href={`${currentBase}items/`}>アイテム</a></li>
+          <li><a href={`${currentBase}history/`}>歴史 timeline</a></li>
         </ul>
       </div>
 

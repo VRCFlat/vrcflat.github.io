@@ -7,6 +7,8 @@ import type { ImageMetadata } from 'astro';
 import FallbackImage from '../assets/ogp.webp';
 import { SITE_TITLE } from '../consts';
 
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+
 interface Props {
 	title: string;
 	description: string;
@@ -26,17 +28,17 @@ const imageSrc = typeof image === 'string'
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" href={`${import.meta.env.BASE_URL}/favicon.ico`} />
-<link rel="icon" type="image/png" sizes="16x16" href={`${import.meta.env.BASE_URL}/icon16.png`} />
-<link rel="icon" type="image/png" sizes="48x48" href={`${import.meta.env.BASE_URL}/icon48.png`} />
-<link rel="icon" type="image/png" sizes="128x128" href={`${import.meta.env.BASE_URL}/icon128.png`} />
-<link rel="apple-touch-icon" href={`${import.meta.env.BASE_URL}/icon128.png`} />
-<link rel="sitemap" href={`${import.meta.env.BASE_URL}/sitemap-index.xml`} />
+<link rel="icon" href={`${base}favicon.ico`} />
+<link rel="icon" type="image/png" sizes="16x16" href={`${base}icon16.png`} />
+<link rel="icon" type="image/png" sizes="48x48" href={`${base}icon48.png`} />
+<link rel="icon" type="image/png" sizes="128x128" href={`${base}icon128.png`} />
+<link rel="apple-touch-icon" href={`${base}icon128.png`} />
+<link rel="sitemap" href={`${base}sitemap-index.xml`} />
 <link
 	rel="alternate"
 	type="application/rss+xml"
 	title={SITE_TITLE}
-	href={`${import.meta.env.BASE_URL}/rss.xml`}
+	href={`${base}rss.xml`}
 />
 <meta name="generator" content={Astro.generator} />
 

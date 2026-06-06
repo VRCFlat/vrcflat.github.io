@@ -14,17 +14,17 @@ const SEO_DESCRIPTION = "2026年7月4日(土)開催！フラットユーザー�
     <meta name="description" content={SEO_DESCRIPTION} />
     
     <!-- Meta tags for Favicons -->
-    <link rel="icon" href={`${import.meta.env.BASE_URL}/favicon.ico`} />
-    <link rel="icon" type="image/png" sizes="16x16" href={`${import.meta.env.BASE_URL}/icon16.png`} />
-    <link rel="icon" type="image/png" sizes="48x48" href={`${import.meta.env.BASE_URL}/icon48.png`} />
-    <link rel="icon" type="image/png" sizes="128x128" href={`${import.meta.env.BASE_URL}/icon128.png`} />
-    <link rel="apple-touch-icon" href={`${import.meta.env.BASE_URL}/icon128.png`} />
+    <link rel="icon" href={`${currentBase}favicon.ico`} />
+    <link rel="icon" type="image/png" sizes="16x16" href={`${currentBase}icon16.png`} />
+    <link rel="icon" type="image/png" sizes="48x48" href={`${currentBase}icon48.png`} />
+    <link rel="icon" type="image/png" sizes="128x128" href={`${currentBase}icon128.png`} />
+    <link rel="apple-touch-icon" href={`${currentBase}icon128.png`} />
 
     <!-- Open Graph Tags -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={SEO_TITLE} />
     <meta property="og:description" content={SEO_DESCRIPTION} />
-    <meta property="og:image" content={`${Astro.site}${import.meta.env.BASE_URL}/images/mtup/10/SelfPoster/full.webp`} />
+    <meta property="og:image" content={`${Astro.site}${currentBase}images/mtup/10/SelfPoster/full.webp`} />
     
     <style>
         html, body {

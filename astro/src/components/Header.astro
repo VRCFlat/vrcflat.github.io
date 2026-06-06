@@ -2,23 +2,25 @@
 // src/components/Header.astro
 import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink.astro';
+
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 
 <header class="header">
   <nav class="nav-container">
     <div class="nav-brand">
-      <a href={`${import.meta.env.BASE_URL}/`} class="brand-link brand-font">
+      <a href={base} class="brand-link brand-font">
         <span class="brand-icon">🐾</span> {SITE_TITLE}
       </a>
     </div>
     
     <!-- Desktop Navigation -->
     <div class="nav-links desktop-only">
-      <HeaderLink href={`${import.meta.env.BASE_URL}/`} class="nav-item">ホーム</HeaderLink>
-      <HeaderLink href={`${import.meta.env.BASE_URL}/guide/`} class="nav-item">入門ガイド</HeaderLink>
-      <HeaderLink href={`${import.meta.env.BASE_URL}/community/`} class="nav-item">コミュニティ</HeaderLink>
-      <HeaderLink href={`${import.meta.env.BASE_URL}/items/`} class="nav-item">アイテム</HeaderLink>
-      <HeaderLink href={`${import.meta.env.BASE_URL}/history/`} class="nav-item">歴史</HeaderLink>
+      <HeaderLink href={base} class="nav-item">ホーム</HeaderLink>
+      <HeaderLink href={`${base}guide/`} class="nav-item">入門ガイド</HeaderLink>
+      <HeaderLink href={`${base}community/`} class="nav-item">コミュニティ</HeaderLink>
+      <HeaderLink href={`${base}items/`} class="nav-item">アイテム</HeaderLink>
+      <HeaderLink href={`${base}history/`} class="nav-item">歴史</HeaderLink>
     </div>
 
     <!-- Mobile Menu Button -->
@@ -32,11 +34,11 @@ import HeaderLink from './HeaderLink.astro';
   <!-- Mobile Dropdown Navigation -->
   <div class="mobile-menu mobile-only" id="mobileMenu">
     <div class="mobile-menu-inner">
-      <HeaderLink href={`${import.meta.env.BASE_URL}/`} class="mobile-nav-item">ホーム</HeaderLink>
-      <HeaderLink href={`${import.meta.env.BASE_URL}/guide/`} class="mobile-nav-item">入門ガイド</HeaderLink>
-      <HeaderLink href={`${import.meta.env.BASE_URL}/community/`} class="mobile-nav-item">コミュニティ</HeaderLink>
-      <HeaderLink href={`${import.meta.env.BASE_URL}/items/`} class="mobile-nav-item">アイテム</HeaderLink>
-      <HeaderLink href={`${import.meta.env.BASE_URL}/history/`} class="mobile-nav-item">歴史</HeaderLink>
+      <HeaderLink href={base} class="mobile-nav-item">ホーム</HeaderLink>
+      <HeaderLink href={`${base}guide/`} class="mobile-nav-item">入門ガイド</HeaderLink>
+      <HeaderLink href={`${base}community/`} class="mobile-nav-item">コミュニティ</HeaderLink>
+      <HeaderLink href={`${base}items/`} class="mobile-nav-item">アイテム</HeaderLink>
+      <HeaderLink href={`${base}history/`} class="mobile-nav-item">歴史</HeaderLink>
       
     </div>
   </div>
