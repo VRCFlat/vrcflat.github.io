@@ -1,6 +1,6 @@
 ---
 // src/pages/mtup/10.astro
-const currentBase = import.meta.env.BASE_URL + '/';
+const currentBase = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 
 const SEO_TITLE = "第10回フラット集会";
 const SEO_DESCRIPTION = "2026年7月4日(土)開催！フラットユーザーのための気軽な交流イベント「第10回フラット集会」の特設ページです。イベント概要、参加方法、スタッフ、協賛イベントなどの情報を掲載しています。";

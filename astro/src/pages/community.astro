@@ -4,7 +4,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const currentBase = import.meta.env.BASE_URL + '/';
+const currentBase = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 
 const SEO_TITLE = "フラットくんの温かいコミュニティ | フラットファンクラブ";
 const SEO_DESCRIPTION = "アバター「フラット」くんのオーナーたちが集まる、愛にあふれたコミュニティの紹介。年1回100名以上が集まる大集会や、日々の交流情報をお届け！";

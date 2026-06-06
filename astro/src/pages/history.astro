@@ -7,7 +7,7 @@ import Footer from '../components/Footer.astro';
 const SEO_TITLE = "フラットくんの歩んできた歴史 | フラットファンクラブ";
 const SEO_DESCRIPTION = "アバター「フラット」くんのアップデート履歴から、歴代の定例集会・撮影会の開催記録まで、もふもふアバターの進化の歩みを振り返るタイムライン！";
 
-const currentBase = import.meta.env.BASE_URL + '/';
+const currentBase = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 
 const avatarHistory = [
   {
