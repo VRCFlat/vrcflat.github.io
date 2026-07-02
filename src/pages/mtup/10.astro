@@ -45,7 +45,7 @@ const eventSchema = {
     <meta name="description" content={SEO_DESCRIPTION} />
     <meta name="generator" content={Astro.generator} />
     <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
-    <link rel="sitemap" href={new URL(`${currentBase}sitemap-index.xml`, Astro.site)} />
+    <link rel="sitemap" href={new URL(`${currentBase}sitemap.xml`, Astro.site)} />
     
     <!-- Preload LCP hero background image -->
     <link rel="preload" as="image" href={`${currentBase}images/mtup/10/hero-bg.webp`} fetchpriority="high" />
