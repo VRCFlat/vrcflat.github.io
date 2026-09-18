@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import sharp from 'sharp';
 
-const inputDir = path.resolve('../dev/History/集合写真');
+const inputDir = path.resolve('../pvt/dev/History/集合写真');
 const outputDir = path.resolve('public/images/community');
 
 if (!fs.existsSync(outputDir)) {
